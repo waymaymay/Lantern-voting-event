@@ -16,7 +16,29 @@
     width: 100%;
     height: 200rem;
     background-color: #FFEAF7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
+
+.notice-group{
+    width: 80%;
+    height: 16vmin;
+    border-width: 2px;
+    border-style:solid;
+    border-color: rgb(255, 200, 225);
+    border-radius: 12px;
+    background-color: #ffeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    }
+
+    
+
+
 
 @media (max-width: 576px) {
     .web-banner{
@@ -27,7 +49,7 @@
     .h5-banner{
         display: block;
         width: 100%;
-        
+
     }
 
     .main-content{
