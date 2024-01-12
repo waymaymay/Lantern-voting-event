@@ -23,22 +23,54 @@
 }
 
 .notice-group{
-    width: 80%;
-    height: 16vmin;
-    border-width: 2px;
-    border-style:solid;
-    border-color: rgb(255, 200, 225);
-    border-radius: 12px;
+    border-radius: 6px;
+    border: 1.5px solid #CD0D7E;
+    background: rgba(255, 255, 255, 0.50);
+    width: 68%;
+    height: 6.8%;
     background-color: #ffeeee;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 30px;
+    padding: 10px 30px;
+    margin: 30px 0;
     }
 
-    
+    .my-divider {
+        border: 0.8px solid #C40E7A; 
+        margin: 10px 0;
+        opacity: 0.6;
+      }
 
+      .top{
+        color: #C40E7A;
+        font-family: Noto Sans TC;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; /* 30px */
+        letter-spacing: 0.8px;
+      }
 
+      .sub{
+        color: #C40E7A;
+        font-family: Noto Sans TC;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 24px */
+        letter-spacing: 0.64px;
+      }
+
+      .index-sub{
+        color: var(--content-placeholder-off, #474747);
+        font-family: Noto Sans TC;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 24px */
+        letter-spacing: 0.64px;
+      }
 
 @media (max-width: 576px) {
     .web-banner{

@@ -14,13 +14,16 @@ function Home(){
             <div className='main-content'>
                 <div className='notice-group'>
                     <div className='notice-one'>
-                        <div className='index-top top'>活動時間</div>
-                        <div className='index-sub sub'>2025年1月20日</div>
+                        <div className='index-top top'>線上投票辦法</div>
+                        <div className='index-sub-light sub'>Party龍燈區評比活動即日起開跑!</div>
+                        <div className='index-sub'>投票者每人每日1組手機號碼為1票,活動結束後,票選前三名的區公所燈組,將從投此名單中各抽出10位民眾,獲得臺中市十大伴手禮 (總計30份好禮)。</div>
                     </div>
-
+                    <hr className="my-divider" />
+                
                     <div className='notice-two'>
-                        <div className='index-top'>活動獎項</div>
-                        <div className='index-sub sub'>抽獎送台中名產</div>
+                        <div className='index-top top'>抽獎結果公告</div>
+                        <div className='index-sub'>2024年2月27日 (週二) 公布評比結果</div>
+                        <div className='index-sub'>2024年3月01日 (週五) 公布伴手禮得獎名單</div>
                     </div>
                 </div>
                 
