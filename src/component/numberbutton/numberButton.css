@@ -1,0 +1,11 @@
+.numberbutton{
+    display: inline-flex;
+    width: 4vmin;
+    height:4vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2vmin;
+    z-index: 100;
+    margin: 5px 10px;
+}
