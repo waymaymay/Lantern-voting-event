@@ -1,7 +1,7 @@
 import React from 'react';
 import './home.css';
 import AreaButton from '../../component/areabutton/areaButton';
-import NumberButton from '../../component/numberbutton/numberButton';
+import UpperButton from '../../component/upperbutton/upperButton';
 
 
 function Home(){
@@ -69,6 +69,8 @@ function Home(){
                     <AreaButton number={27} text="北屯區公所" />
                     <AreaButton number={28} text="中區區公所" />
                 </div>
+                <UpperButton/>
+                
 
              
             
