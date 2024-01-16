@@ -2,11 +2,15 @@ import React from 'react';
 import './home.css';
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
+import WebPresent from '../../component/part/webPresent';
+import image1 from '../../images/contest/1山線-豐原區燈組.jpg'
 
 
 function Home(){
     const banner_img = require('../../images/banner_img.png')
     const banner_h5 = require('../../images/H5-index-banner.png')
+    const carouselImages =[image1];
+
 
     return (
         <div className='layout'>
@@ -70,10 +74,14 @@ function Home(){
                     <AreaButton number={28} text="中區區公所" />
                 </div>
                 <UpperButton/>
-                
 
-             
-            
+                <div className='contest_group'>
+                    <div className='left_group'>
+                        < WebPresent images ={carouselImages}/>
+                    </div>
+                    
+                </div>
+
             </div>
         </div>
     );
