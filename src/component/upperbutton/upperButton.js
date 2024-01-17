@@ -10,8 +10,8 @@ function UpperButton (){
         border: 'none',
         cursor: 'pointer',
         position: 'fixed',
-        bottom: '20px', // 调整按钮在底部的距离
-        right: '20px', // 调整按钮在右侧的距离
+        bottom: '30px', // 调整按钮在底部的距离
+        right: '7%', // 调整按钮在右侧的距离
         display: showButton ? 'block' : 'none',
   };
 

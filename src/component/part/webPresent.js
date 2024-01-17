@@ -1,6 +1,8 @@
 import React,{useState} from "react";
 import '../part/webPresent.css';
 
+const left_arrow = require('../../images/left_arrow.png')
+const right_arrow = require ('../../images/right_arrow.png')
 
 const WebPresent=({images})=>{
     const [currentIndex,setCurrestIndex]=useState(0);
@@ -16,15 +18,35 @@ const WebPresent=({images})=>{
     const shouldHideButtons = images.length <= 1;
 
     return(
-        <div>
-            <img src={ images[currentIndex]} 
-            alt={`Images ${currentIndex +1}`}
-            style={{ width: '590px', height: '358px' }}
-            />
-            <button onClick={handlePrev}>上一張</button>
-            <button onClick={handleNext}>下一張</button>
+        <div className="web-present-container">
+            
+            <div className="web-present">
+                <button onClick={handlePrev} className="arrow-button left-arrow">
+                    <img src={left_arrow} alt='' className="left_arrow"/>
+                </button>
+                    
+                <button onClick={handleNext} className="arrow-button right-arrow">
+                    <img src={right_arrow} alt='' className="right_arrow"/>
+                </button>
+                <img 
+                    src={ images[currentIndex]} 
+                    alt={`Images ${currentIndex +1}`}
+                    style={{ width: '590px', height: '358px', borderRadius: '14px',boxShadow:'1.5px 1.5px 8px rgba(0,0,0, 0.35)'}}
+                    className="big_image"
+                    />
+            </div>
+        {images.length > 1 && (
+            <div className="dots-container">
+                {images.map((_, index) => (
+                    <span
+                        key={index}
+                        className={`dot ${index === currentIndex ? 'active' : ''}`}
+                        onClick={() => setCurrestIndex(index)}
+                    />
+                ))}
+            </div>
+        )}
         </div>
-        
     );
 };
 

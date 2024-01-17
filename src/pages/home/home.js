@@ -3,13 +3,14 @@ import './home.css';
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
 import WebPresent from '../../component/part/webPresent';
-import image1 from '../../images/contest/1山線-豐原區燈組.jpg'
-
+import image1 from '../../images/contest/1山線-豐原區燈組.jpg';
+import image2 from '../../images/contest/1_2山線test.jpg';
 
 function Home(){
     const banner_img = require('../../images/banner_img.png')
     const banner_h5 = require('../../images/H5-index-banner.png')
-    const carouselImages =[image1];
+    const carouselImages =[image1 , image2];
+    
 
 
     return (
@@ -78,6 +79,7 @@ function Home(){
                 <div className='contest_group'>
                     <div className='left_group'>
                         < WebPresent images ={carouselImages}/>
+                        
                     </div>
                     
                 </div>
