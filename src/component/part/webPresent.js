@@ -31,8 +31,8 @@ const WebPresent=({images})=>{
                 <img 
                     src={ images[currentIndex]} 
                     alt={`Images ${currentIndex +1}`}
-                    style={{ width: '590px', height: '358px', borderRadius: '14px',boxShadow:'1.5px 1.5px 8px rgba(0,0,0, 0.35)'}}
-                    className="big_image"
+                    style={{ width: '96%', height: '60%', borderRadius: '14px',boxShadow:'1.5px 1.5px 8px rgba(0,0,0, 0.35)'}}
+                    className="big_image"  //圖比例1:1.6
                     />
             </div>
         {images.length > 1 && (

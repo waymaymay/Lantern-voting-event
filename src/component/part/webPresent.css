@@ -1,7 +1,6 @@
 /* webPresent.css */
 
 .arrow-button {
-    
     position: absolute;
     display: flex;
     align-items:center;
@@ -70,4 +69,12 @@
 
 .big_image{
     margin-left:35%;
+}
+
+
+@media (max-width: 576px){
+
+
+
+  
 }

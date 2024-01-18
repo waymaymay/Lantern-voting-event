@@ -2,15 +2,28 @@ import React from 'react';
 import './home.css';
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
+import ClosePageButton from '../../component/closepagebutton/closePageButton';
 import WebPresent from '../../component/part/webPresent';
+import IssueText from '../../component/issuetext/IssueText';
 import image1 from '../../images/contest/1山線-豐原區燈組.jpg';
 import image2 from '../../images/contest/1_2山線test.jpg';
 
 function Home(){
     const banner_img = require('../../images/banner_img.png')
     const banner_h5 = require('../../images/H5-index-banner.png')
-    const carouselImages =[image1 , image2];
     
+    // 圖片區
+    const carouselImages =[image1 , image2]; 
+
+
+    //文案區
+    const issueTextContent = {
+        topTitle: '豐山線-山城龍賀尞',
+        itemNumber: 1,
+        mainTitle: '豐原區公所',
+        groupName: '美樂豐原 龍耀葫蘆墩',
+        introduce: '吉祥物-福蘆妹 葫蘆墩圳為中部最老的灌溉水圳之一 慈濟宮-豐原最早的廟宇及信仰中心',
+      };
 
 
     return (
@@ -79,9 +92,10 @@ function Home(){
                 <div className='contest_group'>
                     <div className='left_group'>
                         < WebPresent images ={carouselImages}/>
-                        
                     </div>
-                    
+                    <div className='right_group'>
+                        <IssueText {...issueTextContent}  />
+                    </div>
                 </div>
 
             </div>

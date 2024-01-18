@@ -1,7 +1,17 @@
+
 .banner_img{
     max-width: 100%;
     height: auto;
+    
 }
+
+.banner{
+  width: 100%;
+  height: auto;
+  background-color: linear-gradient(to bottom, #FF119C, #E3007F);
+}
+
+
 .web-banner
 {
     display: block;
@@ -95,6 +105,15 @@
         /* background-color:#474747; */
       }
 
+      .right_group{
+        width: 33%;
+        height: auto;
+        background-color: #ffe4f4;
+        position: absolute;
+        right: 18%;
+        padding:10px 16px;
+      }
+
 
 
 
@@ -102,13 +121,17 @@
 @media (max-width: 576px) {
     .web-banner{
         display:none;
-        
     }
 
     .h5-banner{
         display: block;
         width: 100%;
+    }
 
+    .banner{
+      width: 100%;
+      height: auto;
+      background-color: linear-gradient(to bottom, #FF119C, #E3007F);
     }
 
     .main-content{
