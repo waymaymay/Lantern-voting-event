@@ -1,10 +1,16 @@
 /* webPresent.css */
 
 .arrow-button {
-    position: absolute;
-    display: flex;
+  position: absolute;
+  bottom: -52px;
+  left: 84%;
+  transform: translateX(-20%);
+
+
+    /* position: absolute;
+    
     align-items:center;
-    transform: translateY(1190%);
+    transform: translateY(1190%); */
     background-color: rgba(255, 255, 255, 0);
     border: none;
     cursor: pointer;
@@ -17,7 +23,7 @@
   }
   
   .right-arrow {
-    left: 96%; /* 調整右箭頭的位置 */
+    left: 98%; /* 調整右箭頭的位置 */
   }
 
   .arrow-button:hover {

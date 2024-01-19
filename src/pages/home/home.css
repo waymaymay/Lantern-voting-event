@@ -100,18 +100,18 @@
       }
 
       .left_group{
-        width: 37rem;
-        height: 25rem;
-        /* background-color:#474747; */
+        width:38.376%;
+        height: auto;
+        
       }
 
       .right_group{
         width: 33%;
         height: auto;
-        background-color: #ffe4f4;
+        /* background-color: #ffe4f4; */
         position: absolute;
-        right: 18%;
-        padding:10px 16px;
+        right: 15%;
+      
       }
 
 

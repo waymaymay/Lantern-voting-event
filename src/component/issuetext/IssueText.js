@@ -13,14 +13,20 @@ const IssueText=({topTitle , itemNumber , mainTitle ,groupName, introduce })=>{
                 <div className="h2"> {mainTitle}</div>
             </div>
             
-            <div className="lantern">
-                <div className="lantern_name"> 燈組名稱 | </div>
-                <div className="text"> {groupName} </div>
+            <div className="lantern_groups">
+                <div className="lantern_name"> 燈組名稱 |  </div>
+                    <div className="lantern_text_1"> {groupName} 
+                    </div>
+               
+                   
             </div>
-            <div className="lantern">
-                <div className="lantern_name"> 燈組介紹 | </div>
-                <div className="text"> {introduce} </div>
+            <div className="lantern_info_group">
+                <div className="lantern_info"> 燈組介紹 | </div> 
+                <div className="lantern_text_2"> {introduce} 
+                    
+                </div>    
             </div>
+            
             
         </div>
         );
