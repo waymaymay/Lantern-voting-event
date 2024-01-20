@@ -1,81 +1,62 @@
 /* webPresent.css */
 
 .arrow-button {
-  position: absolute;
-  bottom: -52px;
-  left: 84%;
-  transform: translateX(-20%);
-
-
-    /* position: absolute;
-    
-    align-items:center;
-    transform: translateY(1190%); */
+    position: absolute;
+    bottom: -9%;
+    left: 84%;
+    transform: translateX(-20%);
     background-color: rgba(255, 255, 255, 0);
     border: none;
     cursor: pointer;
+    color: rgb(155, 155, 155);
+    
     /* transition: background-color 0.3s; */
   }
 
   .left-arrow {
-    
-    left: 66%; /* 調整左箭頭的位置 */
+    font-size: 1.8rem;
+    left: 62%; /* 調整左箭頭的位置 */
   }
   
   .right-arrow {
+    font-size: 1.8rem;
     left: 98%; /* 調整右箭頭的位置 */
   }
 
   .arrow-button:hover {
-    opacity:0.9;
+    color: rgb(205, 205, 205);
   }
 
+  .web-present-container {
+      position: relative;
+      margin-bottom: 5%;
+     
+  }
 
+  .dots-container {
+      position: relative;
+      bottom: -20px;
+      left: 126%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 36px;
+  }
 
-.web-present-container {
-    position: relative;
-}
+  .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ccc;
+      cursor: pointer;
+  }
 
-/* .web-present {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 590px;
-    height: 358px;
-    overflow: hidden;
-}
+  .dot.active {
+      background-color: #6f6f6f;
+  }
 
-.web-present img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
-.dots-container {
-    position: absolute;
-    bottom: -40px;
-    left: 84%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 30px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: #6f6f6f;
-}
-
-.big_image{
-    margin-left:35%;
-}
+  .big_image{
+      margin-left:34%;
+  }
 
 
 @media (max-width: 576px){

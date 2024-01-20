@@ -1,11 +1,15 @@
 import React,{useState} from "react";
+import PropTypes from 'prop-types';
 import '../part/webPresent.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-const left_arrow = require('../../images/left_arrow.png')
-const right_arrow = require ('../../images/right_arrow.png')
 
 const WebPresent=({images})=>{
     const [currentIndex,setCurrestIndex]=useState(0);
+    
+    let shouldHideButtons = images.length<= 1;
+   
 
     const handleNext =()=>{
         setCurrestIndex((prevIndex)=>(prevIndex +1 )% images.length);
@@ -15,27 +19,33 @@ const WebPresent=({images})=>{
         setCurrestIndex((prevIndex)=>(prevIndex-1+images.length)%images.length);
     };
 
-    const shouldHideButtons = images.length <= 1;
-
     return(
         <div className="web-present-container">
-            
+                {images.length > 0 && (
             <div className="web-present">
+            {!shouldHideButtons && (
+                <>
                 <button onClick={handlePrev} className="arrow-button left-arrow">
-                    <img src={left_arrow} alt='' className="left_arrow"/>
+                    <FontAwesomeIcon icon={faAngleLeft} />
                 </button>
-                    
+
                 <button onClick={handleNext} className="arrow-button right-arrow">
-                    <img src={right_arrow} alt='' className="right_arrow"/>
+                    <FontAwesomeIcon icon={faAngleRight} />
                 </button>
-                <img 
-                    src={ images[currentIndex]} 
-                    alt={`Images ${currentIndex +1}`}
-                    style={{ width: '96%', height: '60%', borderRadius: '14px',boxShadow:'1.5px 1.5px 8px rgba(0,0,0, 0.35)'}}
-                    className="big_image"  //圖比例1:1.6
-                    />
-            </div>
-        {images.length > 1 && (
+                </>
+            )}
+                    
+                    <img 
+                        src={ images[currentIndex]} 
+                        alt={`Images ${currentIndex +1}`}
+                        style={{ width: '96%', height: '60%', borderRadius: '14px',boxShadow:'1.5px 1.5px 8px rgba(0,0,0, 0.35)'}}
+                        className="big_image"  //圖比例1:1.6
+                        />
+                    </div>
+            )}
+            
+            
+         {images.length > 1 && (
             <div className="dots-container">
                 {images.map((_, index) => (
                     <span
@@ -48,6 +58,11 @@ const WebPresent=({images})=>{
         )}
         </div>
     );
+    
 };
+
+WebPresent.propTypes = {
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,}
+
 
 export default WebPresent;

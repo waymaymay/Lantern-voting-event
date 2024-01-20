@@ -5,15 +5,21 @@ import UpperButton from '../../component/upperbutton/upperButton';
 import ClosePageButton from '../../component/closepagebutton/closePageButton';
 import WebPresent from '../../component/part/webPresent';
 import IssueText from '../../component/issuetext/IssueText';
-import image1 from '../../images/contest/1山線-豐原區燈組.jpg';
-import image2 from '../../images/contest/1_2山線test.jpg';
+import image101 from '../../images/contest/1山線-豐原區燈組.jpg';
+import image102 from '../../images/contest/1_2山線test.jpg';
+import image201 from '../../images/contest/2山線-石岡區燈組.png';
+import image301 from '../../images/contest/3山線-大雅區燈組.png';
+
+
 
 function Home(){
     const banner_img = require('../../images/banner_img.png')
     const banner_h5 = require('../../images/H5-index-banner.png')
     
     // 圖片區
-    const carouselImages =[image1 , image2]; 
+    const carouselImages1 =[image101 , image102]; 
+    const carouselImages2 =[image201 ]; 
+    const carouselImages3 =[image301 ]; 
 
 
     //文案區
@@ -91,10 +97,29 @@ function Home(){
 
                 <div className='contest_group'>
                     <div className='left_group'>
-                        < WebPresent images ={carouselImages}/>
+                        < WebPresent images ={carouselImages1}/>
                     </div>
                     <div className='right_group'>
-                        <IssueText {...issueTextContent}  />
+                        <IssueText {...issueTextContent} />
+                    </div>
+                </div>
+
+
+                <div className='contest_group_double'>
+                    <div className='left_group'>
+                        < WebPresent images ={carouselImages2}/>
+                    </div>
+                    <div className='right_group'>
+                        <IssueText {...issueTextContent} />
+                    </div>
+                </div>
+
+                <div className='contest_group'>
+                    <div className='left_group'>
+                        < WebPresent images ={carouselImages3}/>
+                    </div>
+                    <div className='right_group'>
+                        <IssueText {...issueTextContent} />
                     </div>
                 </div>
 
