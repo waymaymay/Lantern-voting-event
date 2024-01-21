@@ -1,11 +1,25 @@
-.areabutton{
-    width: 17.6vmin;
-    height:6vmin;
+.areabutton{   
+    height:3rem;
     font-size: 1rem;
     font-weight: 400;
-    margin: 2px 9px;
+    margin: 2px 8px;
     letter-spacing: 0.4px;
-    z-index: 9999;
+    width: 9.7rem;
+
+    
+}
+
+
+
+
+@media (max-width: 576px){
+    .areabutton {
+        width: 6.6rem; 
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
 }
 
 

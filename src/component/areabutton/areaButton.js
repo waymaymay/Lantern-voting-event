@@ -2,7 +2,7 @@ import React ,{useEffect, useState , useRef } from "react";
 import '../areabutton/areaButton.css';
 
 function AreaButton (props){
-    const { buttonText , number , text}=props;
+    const { number , text}=props;
 
     const [isClicked , setClicked]=useState(false);
     const [isHovered , setHovered]=useState(false);
@@ -18,6 +18,9 @@ function AreaButton (props){
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        
+        
+        
   };
 
     const squareStyle={
@@ -25,7 +28,7 @@ function AreaButton (props){
         width: '28px',
         height: '28px',
         marginRight: '8px',
-        padding:'3px',
+        padding:'6px',
         borderRadius: '6px',
         color: isClicked? '#C3006D':'#FFF',
         textAlign: 'center',
@@ -66,20 +69,20 @@ function AreaButton (props){
   }, [isClicked]);
 
     return(      
-    <button 
-        ref={buttonRef}
-        className="areabutton"
-        style={buttonStyle} 
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onClick={handleClick}
-        >
-        
-        <span style={squareStyle}>{number}</span>
-        {text && <span>{text}</span>}
-        {buttonText && <span>{buttonText}</span>}
-        
-    </button>
+        <button 
+            ref={buttonRef}
+            className="areabutton"
+            style={buttonStyle} 
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onClick={handleClick}
+            >
+            
+            <span style={squareStyle}>{number}</span>
+            {text && <span>{text}</span>}
+            
+        </button>
+
   );
 }
 export default AreaButton;
