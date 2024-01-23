@@ -1,3 +1,4 @@
+
 .number_title{
     display: flex;
     flex-direction: row;
@@ -6,116 +7,295 @@
 
 
 .item{
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
     border-radius: 6px;
     background-color: rgb(255, 0, 166);
     color: rgb(255, 255, 255);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    margin: 6px 6px 6px 0;
+    margin: 6px 6px 0px 0;
     display: flex;
-    justify-content: center; /* 水平置中 */
+    justify-content: center;
+    
 }
 
 
 .h3{
 font-size: 1.26rem;
-color: var(--content-placeholder-off, #474747);
+color:#474747;
 font-family: Noto Sans TC;
 font-style: normal;
 font-weight: 700;
-line-height: 200%; /* 16px */
+line-height: 180%; /* 16px */
 letter-spacing: 0.6px;
 }
 
 .h2{
-color: var(--content-placeholder-off, #474747);
+color:#474747;
 font-family: Noto Sans TC;
 font-size: 1.5rem;
 font-style: normal;
 font-weight: 900;
-line-height: 200%; /* 24px */
+line-height: 180%; /* 24px */
 letter-spacing: 0.6px;
-
 }
 
+.issue_all{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+
+.issue_2,
+.issue_3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
 
 .lantern_groups{
     display: flex;
-    flex-direction: row;
+    width: 100%;
+    flex-direction: column; 
+    align-items:flex-start;
+
+}
+
+
+.titles{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    text-indent: 1.2rem;
+  
+}
+
+.left_icon_1{
+    color: #474747;
+    font-family: Noto Sans TC;
+    font-size: 1.33rem;
+    font-weight: 600;
+    margin: 0 5px 0 5px;
+    
+}
+
+.right_icon_1{
+    color: #474747;
+    font-family: Noto Sans TC;
+    font-size: 1.33rem;
+    font-weight: 600;
+    margin: 0 5px 0 7px;
 }
 
 .lantern_name{
-    color: var(--content-placeholder-off, #474747);
+    color:  #474747;
     font-family: Noto Sans TC;
     font-size: 1.26rem;
-    font-style: normal;
     font-weight: 500;
-    line-height: 200%;
-    letter-spacing: 0.77px;
-    display: inline;
-    position: absolute;
-
+    width:100%;
+    white-space:nowrap;
+  
+    
 }
-
 
 .lantern_text_1{
-    color: var(--content-placeholder-off, #474747);
+    color: #474747;
     font-family: Noto Sans TC;
     font-size: 1.26rem;
-    font-style: normal;
     font-weight: 400;
-    line-height: 200%;
-    letter-spacing: 0.77px;
-    padding: 0 0 0 6px;
-    text-align: left;
-    text-indent: 6rem;
+    padding-bottom: 10px;
+
 }
 
-.lantern_info_group{
-    display: flex;
-    flex-direction: row;
+
+.lantern_info_group{ 
+    width: fit-content;
+    width: 100%;
+    
 }
 
 
 .lantern_info{
-    color: var(--content-placeholder-off, #474747);
+    color:  #474747;
     font-family: Noto Sans TC;
     font-size: 1.26rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 200%;
-    letter-spacing: 0.77px;
-    text-align: left;
+    font-weight: 600;
+    white-space:nowrap;
+    width:fit-content;
+ 
 }
+
+.left_icon_2{
+    color: #474747;
+    font-family: Noto Sans TC;
+    font-size: 1.33rem;
+    font-weight: 600;
+    margin: 0 5px 0 5px;
+    
+}
+
+.right_icon_2{
+    color: #474747;
+    font-family: Noto Sans TC;
+    font-size: 1.33rem;
+    font-weight: 600;
+    margin: 0 5px 0 7px;
+}
+
 
 .lantern_text_2{
-    color: var(--content-placeholder-off, #474747);
+    color: #474747;
     font-family: Noto Sans TC;
     font-size: 1.26rem;
-    font-style: normal;
     font-weight: 400;
-    line-height: 200%;
-    letter-spacing: 0.77px;
-    padding: 0 0 0 6px;
-    text-align: left;
-    position: absolute;
-    text-indent: 6rem;
- 
-
-}
-
-
-
-
-@media (max-width: 576px) {
-
+    /* text-indent: 30%; */
+    /* background-color: rgb(128, 128, 255); */
+    width: auto;
+    /* margin-left: -34%; */
+    
 
     
 }
 
 
 
+@media (max-width: 576px) {
+    .number_title{
+        display: flex;
+        flex-direction: row;
+        align-items:last baseline;
+    }
+    
+    
+    .item{
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 6px;
+        background-color: rgb(255, 0, 166);
+        color: rgb(255, 255, 255);
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        
+        
+    }
+    
+    .h3{
+        margin-top: 6%;
+        font-size: 1.05rem;
+        color:#474747;
+        font-family: Noto Sans TC;
+        font-weight: 400;
+        line-height: 130%; /* 16px */
+        letter-spacing: 0.6px;
+        }
+        
+        .h2{
+        color:#474747;
+        font-family: Noto Sans TC;
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 160%; /* 24px */
+        letter-spacing: 0.6px;
+        }
+
+    .issue_all{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -30%;    
+    }
 
 
+    .lantern_groups{
+        display: flex;
+        flex-direction:column;
+        width: 100%;    
+    }
+  
+    /* .left_icon_1
+    {
+        color: #474747;
+        font-family: Noto Sans TC;
+        font-size: 1.33rem;
+        font-weight: 600;
+        margin: 0 5px 0 -20px;  
+    } */
+    
+    /* .right_icon_1{
+        color: #474747;
+        font-family: Noto Sans TC;
+        font-size: 1.33rem;
+        font-weight: 600;
+        margin: 0 5px 0 5px;
+    } */
+
+    .lantern_name,
+    .lantern_info
+    {
+        display: flex;
+        justify-content: space-around;
+        color: #474747;
+        font-family: Noto Sans TC;
+        font-size: 1.2rem;
+        font-weight: 500;
+        width: fit-content;
+        flex-wrap: nowrap;
+
+    }
+
+
+    .lantern_text_1{
+        color:  #474747;
+        font-family: Noto Sans TC;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        letter-spacing: 0.77px;
+        
+    }
+ 
+
+      .titles{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+       
+      }
+
+
+        /* .right_icon_2{
+            color: #474747;
+            font-family: Noto Sans TC;
+            font-size: 1.33rem;
+            font-weight: 600;
+            
+        } 
+
+        .left_icon_2{
+            color: #474747;
+            font-family: Noto Sans TC;
+            font-size: 1.33rem;
+            font-weight: 600;
+           
+        } */
+
+        .lantern_text_2{
+            color: #474747;
+            font-family: Noto Sans TC;
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 70%;
+            margin-left: 16.4%;
+            line-height: 160%;
+        }
+
+    
+}

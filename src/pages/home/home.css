@@ -86,37 +86,38 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between; /* 水平分散排列 */
-    margin: 0.4em 0;
-    overflow-x: auto;
-    margin: 0 -4px; 
-    
+    margin: 0.4em 0; 
+  } 
 
-  }
 
 
  .fir_line{
   display: flex;
   flex-direction: row;
   margin: 0.82em 0;
+  justify-content: center;
+  
   } 
 
 .contest_group{
-  padding-top: 4%;
-  padding-bottom: 3%;
+  /* min-height: 26%; */
   width: 100%;
-  height: auto;
+  height:auto;
   display: flex;
   align-items: flex-start;
   background-color: #FFFFFF99;
+  padding-top: 4%;
+  padding-bottom: 3%;
   }
 
 .contest_group_double{
-  padding-top: 4%;
-  padding-bottom: 3%;
+  /* min-height: 30%; */
   width: 100%;
   height: auto;
   display: flex;
   align-items: flex-start;
+  padding-top: 4%;
+  padding-bottom: 3%;
   /* background-color: #FFFFFF99; */
   }
 
@@ -128,18 +129,25 @@
 
 .right_group{
   width: 100%;
-  max-width: 33%;
+  max-width: 42%;
   height: auto;
   position: relative;
   right: -15%;
-  margin-top: 0;
+  margin-top: -5px;
 
   }
 
 
 
 
+
 @media (max-width: 576px) {
+  
+  .layout{
+    width: 100%;
+    overflow-x: hidden;
+    
+  }
 
     .web-banner{
         display:none;
@@ -148,6 +156,7 @@
     .h5-banner{
         display: block;
         width: 100%;
+        
     }
 
     .banner{
@@ -163,46 +172,71 @@
         background-color: #FFEAF7;
     }
 
+
+
     .areabutton_group{
-      overflow-x: auto;
+      max-width: 100%;
+      overflow-x: scroll;
       white-space: nowrap;
       justify-content:flex-start;
+      display: flex;
+      /* flex-direction: column; */
+      margin: 0 -4px;
+      /* align-items: center; */
+      gap: 0.5rem;
+
     }
 
     .fir_line {
-      display: flex;
       flex-wrap: nowrap;
+
+      align-items: flex-start;
+      flex-direction: row;
+ 
     }
 
 
     .contest_group {
       padding-top: 6%;
-      padding-bottom: 22%;
       width: 100%;
       height: auto;
       display: flex;
-      flex-direction: column; /* 修改為 column */
-      align-items: center; /* 修改為 center */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       background-color: #FFFFFF99;
   }
 
     .contest_group_double {
       padding-top: 6%;
-      padding-bottom: 22%;
       width: 100%;
       height: auto;
       display: flex;
-      flex-direction: column; /* 修改為 column */
-      align-items: center; /* 修改為 center */
+      flex-direction: column;
+      align-items: center;
   }
 
 
-    .left_group,
-    .right_group {
-        width: 100%; /* 修改為 100% */
-        max-width: none; /* 移除最大寬度限制 */
+    .left_group{
+        width: 100%; 
+        max-width: 85%; 
+        height: auto;
+        display: flex;
+        align-items: center;
+       
     }
 
+    .right_group {
+        width: 100%; 
+        max-width: 875%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+
+    
   }
 
 

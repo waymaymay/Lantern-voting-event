@@ -30,9 +30,9 @@ function Home(){
         itemNumber: 1,
         mainTitle: '豐原區公所',
         groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce: '吉祥物-福蘆妹 葫蘆墩圳為中部最老的灌溉水圳之一 慈濟宮-豐原最早的廟宇及信仰中心',
-      };
+        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
 
+    };
 
     return (
         <div className='layout'>
@@ -57,41 +57,47 @@ function Home(){
                         </div>  
                     </div>
 
-                    <div className='areabutton_group row col-12 col-xl-8 col-xs-3'>                
-                        <div className='fir_line ' >
-                            <AreaButton number={1} text="豐原區公所" />
-                            <AreaButton number={2} text="石岡區公所" />
-                            <AreaButton number={3} text="大雅區公所" />
-                            <AreaButton number={4} text="沙鹿區公所" />
-                            <AreaButton number={5} text="龍井區公所" />
-                            <AreaButton number={6} text="梧棲區公所" />
-                            <AreaButton number={7} text="大肚區公所" />
+                    <div className='areabutton_group'>                
+                        <div className='fir_line row flex-nowrap flex-sm-wrap' >
+                            <AreaButton className="col col-sm-2" number={1} text="豐原區公所" />
+                            <AreaButton className="col col-sm-2" number={2} text="石岡區公所" />
+                            <AreaButton className="col col-sm-2" number={3} text="大雅區公所" />
+                            <AreaButton className="col col-sm-2" number={4} text="沙鹿區公所" />
+                            <AreaButton className="col col-sm-2" number={5} text="龍井區公所" />
+                            <AreaButton className="col col-sm-2" number={6} text="梧棲區公所" />
+                            <AreaButton className="col col-sm-2" number={7} text="大肚區公所" />
 
-                            <AreaButton number={8} text="清水區公所" />
-                            <AreaButton number={9} text="烏日區公所" />
-                            <AreaButton number={10} text="霧峰區公所" />
-                            <AreaButton number={11} text="南屯區公所" />
-                            <AreaButton number={12} text="西屯區公所" />
-                            <AreaButton number={13} text="北區區公所" />
-                            <AreaButton number={14} text="東區區公所" />
+                            <AreaButton className="col col-sm-2" number={8} text="清水區公所" />
+                            <AreaButton className="col col-sm-2" number={9} text="烏日區公所" />
+                            <AreaButton className="col col-sm-2" number={10} text="霧峰區公所" />
+                            <AreaButton className="col col-sm-2" number={11} text="南屯區公所" />
+                            <AreaButton className="col col-sm-2" number={12} text="西屯區公所" />
+                            <AreaButton className="col col-sm-2" number={13} text="北區區公所" />
+                            <AreaButton className="col col-sm-2" number={14} text="東區區公所" />
                      
-                            <AreaButton number={15} text="新社區公所" />
-                            <AreaButton number={16} text="潭子區公所" />
-                            <AreaButton number={17} text="后里區公所" />
-                            <AreaButton number={18} text="東勢區公所" />
-                            <AreaButton number={19} text="神岡區公所" />
-                            <AreaButton number={20} text="大甲區公所" />
-                            <AreaButton number={21} text="外埔區公所" />
+                            <AreaButton className="col col-sm-2" number={15} text="新社區公所" />
+                            <AreaButton className="col col-sm-2" number={16} text="潭子區公所" />
+                            <AreaButton className="col col-sm-2" number={17} text="后里區公所" />
+                            <AreaButton className="col col-sm-2" number={18} text="東勢區公所" />
+                            <AreaButton className="col col-sm-2" number={19} text="神岡區公所" />
+                            <AreaButton className="col col-sm-2" number={20} text="大甲區公所" />
+                            <AreaButton className="col col-sm-2" number={21} text="外埔區公所" />
 
-                            <AreaButton number={22} text="大安區公所" />
-                            <AreaButton number={23} text="大里區公所" />
-                            <AreaButton number={24} text="太平區公所" />
-                            <AreaButton number={25} text="南區區公所" />
-                            <AreaButton number={26} text="西區區公所" />
-                            <AreaButton number={27} text="北屯區公所" />
-                            <AreaButton number={28} text="中區區公所" />
+                            <AreaButton className="col col-sm-2" number={22} text="大安區公所" />
+                            <AreaButton className="col col-sm-2" number={23} text="大里區公所" />
+                            <AreaButton className="col col-sm-2" number={24} text="太平區公所" />
+                            <AreaButton className="col col-sm-2" number={25} text="南區區公所" />
+                            <AreaButton className="col col-sm-2" number={26} text="西區區公所" />
+                            <AreaButton className="col col-sm-2" number={27} text="北屯區公所" />
+                            <AreaButton className="col col-sm-2" number={28} text="中區區公所" />
+
                         </div>
+
                     </div>
+                    
+
+
+
 
                         <UpperButton/>
 

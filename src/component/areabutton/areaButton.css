@@ -2,9 +2,10 @@
     height:3rem;
     font-size: 1rem;
     font-weight: 400;
-    margin: 2px 8px;
+    margin: 4px 6px;
     letter-spacing: 0.4px;
-    width: 9.7rem;
+    width: 9rem;
+    
 
     
 }
@@ -14,10 +15,11 @@
 
 @media (max-width: 576px){
     .areabutton {
-        width: 6.6rem; 
+        width: 6.4rem; 
         display: flex;
         flex-direction: column;
         height: fit-content;
+        margin: 2px 5px;
     }
 
 }
