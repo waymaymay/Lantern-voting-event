@@ -1,7 +1,11 @@
 import React from 'react';
 import '../../pages/mypage/myPage.css'
-import '../../component/issuetext/IssueText'
-import '../../component/part/webPresent'
+import AreaButton from '../../component/areabutton/areaButton';
+import UpperButton from '../../component/upperbutton/upperButton';
+import ClosePageButton from '../../component/closepagebutton/closePageButton';
+import WebPresent from '../../component/part/webPresent';
+import IssueText from '../../component/issuetext/IssueText';
+
 import image101 from '../../images/contest/1山線-豐原區燈組.jpg';
 import image102 from '../../images/contest/1_2山線test.jpg';
 
@@ -9,7 +13,19 @@ function MyPage() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
+      // 圖片區
     const carouselImages1 =[image101 , image102]; 
+
+
+    //文案區
+    const issueTextContent = {
+        topTitle: '豐山線-山城龍賀尞',
+        itemNumber: 1,
+        mainTitle: '豐原區公所',
+        groupName: '美樂豐原 龍耀葫蘆墩',
+        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
+
+    };
 
     return (
       <div className="page-container">
@@ -33,9 +49,9 @@ function MyPage() {
           <div className="info-section"> 
                 <div className='notice-group' >
                     <div className='notice-one'>
-                        <div className='index-top top'>線上投票辦法</div>
-                        <div className='index-sub-light sub'>Party龍燈區評比活動即日起開跑!</div>
-                        <div className='index-sub'>投票者每人每日1組手機號碼為1票,活動結束後,票選前三名的區公所燈組,將從投此名單中各抽出10位民眾,獲得臺中市十大伴手禮 (總計30份好禮)。</div>
+                        <div className='index-top top'>投票辦法</div>
+                        <div className='index-sub-light sub'>1. 以手機號碼投票,投票者每人每日1組手機號碼為1票。</div>
+                        <div className='index-sub'>2. 活動結束後,票選前三名的區公所燈組,將從投此名單中各抽出10位民眾,獲得臺中市十大伴手禮(總計30份好禮)。</div>
                     </div>
                 <hr className="my-divider" />
 

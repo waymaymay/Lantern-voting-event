@@ -1,5 +1,5 @@
 .numberbutton{
-   
+    display: inline-flex;
     width: 4vmin;
     height:4vmin;
     display: flex;

@@ -1,11 +1,11 @@
-import React from 'react';
-import '../votebutton/VotrButton.css'
+// leave.js
 
+import React from "react";
+import '../votebutton/VoteButton.css';
 
-function VoteButton (){
-    return(
-        <button onClick={}></button>
+const VoteButton = ({label}) =>{
+    return < button className='leave-Button'>{label}</button>;
+};
 
-    )
+export default VoteButton;
 
-}

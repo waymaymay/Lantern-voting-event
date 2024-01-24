@@ -7,7 +7,8 @@
 .header{
   width: 100%;
   height: auto;
-  background-color: linear-gradient(to bottom, #FF119C, #E3007F);
+  border-radius: var(--box-shadow, 0px);
+  background: var(--op-bannerBk, linear-gradient(180deg, #FF119C 0%, #E3007F 100%));
 }
 
 
@@ -79,3 +80,14 @@
   line-height: 150%; /* 24px */
   letter-spacing: 0.64px;
   }
+
+  .contest_group{
+    /* min-height: 26%; */
+    width: 100%;
+    height:auto;
+    display: flex;
+    align-items: flex-start;
+    background-color: #FFFFFF99;
+    padding-top: 4%;
+    padding-bottom: 3%;
+    }

@@ -137,6 +137,10 @@
 
   }
 
+  .vote_button{
+    text-indent: -3.8%;
+  }
+
 
 
 
@@ -232,6 +236,7 @@
         height: auto;
         display: flex;
         justify-content: center;
+        flex-direction: column;
         
     }
 

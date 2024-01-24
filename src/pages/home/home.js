@@ -1,4 +1,7 @@
 import React from 'react';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import '../../pages/home/home.css';
@@ -7,6 +10,10 @@ import UpperButton from '../../component/upperbutton/upperButton';
 import ClosePageButton from '../../component/closepagebutton/closePageButton';
 import WebPresent from '../../component/part/webPresent';
 import IssueText from '../../component/issuetext/IssueText';
+import MyPage from '../mypage/myPage';
+import VoteButton from '../../component/part/votebutton/VoteButton';
+
+
 import image101 from '../../images/contest/1山線-豐原區燈組.jpg';
 import image102 from '../../images/contest/1_2山線test.jpg';
 import image201 from '../../images/contest/2山線-石岡區燈組.png';
@@ -33,6 +40,13 @@ function Home(){
         introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
 
     };
+
+    const navigate = useNavigate();
+
+    const navigateToMyPage = () => {
+        navigate('/MyPage'); // Use the route you defined for MyPage component
+    };
+
 
     return (
         <div className='layout'>
@@ -92,12 +106,7 @@ function Home(){
                             <AreaButton className="col col-sm-2" number={28} text="中區區公所" />
 
                         </div>
-
                     </div>
-                    
-
-
-
 
                         <UpperButton/>
 
@@ -107,7 +116,13 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                 <IssueText {...issueTextContent} />
+                                <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <VoteButton label={"投下您的一票"} />
+                                </div>
                             </div>
+
+
+                        
                         </div>
 
                         <div className='contest_group_double'>

@@ -18,8 +18,7 @@ function AreaButton (props){
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        
-        
+  
         
   };
 

@@ -14,12 +14,12 @@
 
   .left-arrow {
     font-size: 1.8rem;
-    left: 62%; /* 調整左箭頭的位置 */
+    left: 58%; /* 調整左箭頭的位置 */
   }
   
   .right-arrow {
     font-size: 1.8rem;
-    left: 98%; /* 調整右箭頭的位置 */
+    left: 100%; /* 調整右箭頭的位置 */
   }
 
   .arrow-button:hover {
@@ -34,11 +34,12 @@
 
   .dots-container {
       position: relative;
-      bottom: -35px;
-      left: 126%;
+      bottom: -0.6rem;
+      left: 123%;
       transform: translateX(-50%);
       display: flex;
       gap: 36px;
+      margin-top: 6%;
   }
 
   .dot {
@@ -65,21 +66,29 @@
 }
 
 .arrow-button {
-  position: absolute;
-  bottom: -15%;
+  /* position: relative;
+  bottom: -11%;
   left: 50%;
   transform: translateX(-20%);
   background-color: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
-  color: rgb(155, 155, 155);
+  color: rgb(155, 155, 155); */
+
+  position: relative;
+  /* bottom:-18.8rem; */
+  /* left: 92%; */
+  transform: translateX(-50%);
+  /* display: flex; */
+
+
 
 }
 
 .left-arrow {
   font-size: 1.6rem;
   left: 30%; /* 調整左箭頭的位置 */
-}
+} 
 
 .right-arrow {
   font-size: 1.6rem;
@@ -88,7 +97,7 @@
 
 .dots-container {
   position: relative;
-  bottom: -16px;
+  bottom:-0.8rem;
   left: 92%;
   transform: translateX(-50%);
   display: flex;

@@ -1,0 +1,42 @@
+    .leave-Button{
+        width: 22.5rem;
+        height: 3.125rem;
+        background-color: #FFC91A;
+        color: #1C1B1B;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        border-radius: 5px;
+        margin: 20px 20px;
+
+    }
+    
+    .leave-Button:hover {
+        background-color: #FFA31A;
+      }
+
+
+@media (max-width: 576px){
+    .leave-Button{
+        width: 22.5rem;
+        height:1rem;
+        background-color: #FFC91A;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 3.125rem;
+        border-radius: 5px;
+        margin: 20px 20px;
+       }
+    
+    .leave-Button:hover {
+        background-color: #FFA31A;
+      }
+}
+
+
+
+
+
+
