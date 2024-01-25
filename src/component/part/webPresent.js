@@ -23,25 +23,25 @@ const WebPresent=({images})=>{
         <div className="web-present-container">
                 {images.length > 0 && (
             <div className="web-present">
+                <img 
+                    src={ images[currentIndex]} 
+                    alt={`Images ${currentIndex +1}`}
+                    style={{ width: '96%', height: '60%', borderRadius: '14px',boxShadow:'1.5px 1.5px 8px rgba(0,0,0, 0.35)'}}
+                    className="big_image"  //圖比例1:1.6
+                 />
             {!shouldHideButtons && (
-                <>
-                <button onClick={handlePrev} className="arrow-button left-arrow">
-                    <FontAwesomeIcon icon={faAngleLeft} />
-                </button>
+                <div className="arrow-container">
+                    <button onClick={handlePrev} className="arrow-button left-arrow">
+                        <FontAwesomeIcon icon={faAngleLeft} />
+                    </button>
 
-                <button onClick={handleNext} className="arrow-button right-arrow">
-                    <FontAwesomeIcon icon={faAngleRight} />
-                </button>
-                </>
+                    <button onClick={handleNext} className="arrow-button right-arrow">
+                        <FontAwesomeIcon icon={faAngleRight} />
+                    </button>
+                </div>
+                
             )}
-                    
-                    <img 
-                        src={ images[currentIndex]} 
-                        alt={`Images ${currentIndex +1}`}
-                        style={{ width: '96%', height: '60%', borderRadius: '14px',boxShadow:'1.5px 1.5px 8px rgba(0,0,0, 0.35)'}}
-                        className="big_image"  //圖比例1:1.6
-                        />
-                    </div>
+            </div>
             )}
             
             

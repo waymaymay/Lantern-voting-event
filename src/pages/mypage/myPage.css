@@ -34,7 +34,6 @@
 .notice-group{
     border-radius: 12px;
     border: 1.5px solid #CD0D7E;
-    background: rgba(255, 255, 255, 0.50);
     width: auto;
     background-color: #fffafa;
     /* display: flex; */
@@ -44,11 +43,17 @@
     
     }
 
+    .my-divider-page {
+      border: 0.8px solid #C40E7A; 
+      margin: 10px 0;
+      opacity: 0.6;
+    }
+
     
 
 .my-divider {
     border: 0.8px solid #C40E7A; 
-    margin: 20px 0;
+    /* margin: 12px 0; */
     opacity: 0.6;
   }
 
@@ -58,11 +63,12 @@
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 130%; /* 30px */
+  line-height: 100%; /* 30px */
   letter-spacing: 0.8px;
-  margin: 0 0 2px 0;
+  padding-top: 12px;
   display: flex;
-  justify-content: center;
+  justify-content:flex-start;
+  
   }
 
 /* .sub{
@@ -85,22 +91,24 @@
   letter-spacing: 0.64px;
   }
 
-  .contest_group{
+  .contest_group_page{
     /* min-height: 26%; */
     width: 100%;
     height:auto;
     display: flex;
     align-items: flex-start;
     background-color: #FFFFFF99;
-    padding-top: 4%;
-    padding-bottom: 3%;
+    padding-top: 3.5%;
+    padding-bottom: 4.5%;
+
     }
 
     .terms {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    padding-top: 10px;
 }
 
     .terms input[type="checkbox"] {

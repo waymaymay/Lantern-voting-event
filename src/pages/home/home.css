@@ -34,7 +34,6 @@
 .notice-group{
     border-radius: 12px;
     border: 1.5px solid #CD0D7E;
-    background: rgba(255, 255, 255, 0.50);
     width: 68%;
     background-color: #fffafa;
     display: flex;
@@ -107,7 +106,7 @@
   align-items: flex-start;
   background-color: #FFFFFF99;
   padding-top: 4%;
-  padding-bottom: 3%;
+  padding-bottom: 2%;
   }
 
 .contest_group_double{
@@ -117,7 +116,7 @@
   display: flex;
   align-items: flex-start;
   padding-top: 4%;
-  padding-bottom: 3%;
+  padding-bottom: 2%;
   /* background-color: #FFFFFF99; */
   }
 
@@ -150,6 +149,7 @@
   .layout{
     width: 100%;
     overflow-x: hidden;
+    
   }
 
     .web-banner{
