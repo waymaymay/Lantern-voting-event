@@ -35,14 +35,16 @@
     border-radius: 12px;
     border: 1.5px solid #CD0D7E;
     background: rgba(255, 255, 255, 0.50);
-    width: 68%;
+    width: auto;
     background-color: #fffafa;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
-    justify-content: center;
-    padding: 20px 36px;
-    margin: 20px 0;
+    margin: 20px; 
+    padding: 12px;
+    
     }
+
+    
 
 .my-divider {
     border: 0.8px solid #C40E7A; 
@@ -53,28 +55,30 @@
 .top{
   color: #C40E7A;
   font-family: Noto Sans TC;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 30px */
+  line-height: 130%; /* 30px */
   letter-spacing: 0.8px;
-  margin: 0 0 6px 0;
+  margin: 0 0 2px 0;
+  display: flex;
+  justify-content: center;
   }
 
-.sub{
+/* .sub{
   color: #C40E7A;
   font-family: Noto Sans TC;
   font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: 150%; /* 24px */
-  letter-spacing: 0.64px;
-  }
+  /* letter-spacing: 0.64px; */
+  /* } */ 
 
 .index-sub{
   color: var(--content-placeholder-off, #474747);
   font-family: Noto Sans TC;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
@@ -90,4 +94,51 @@
     background-color: #FFFFFF99;
     padding-top: 4%;
     padding-bottom: 3%;
+    }
+
+    .terms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+    .terms input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+
+
+
+    .terms input[type="checkbox"]:checked + span {
+      text-decoration: underline;
+  }
+  
+  /* Optional: Add custom styles for the checkbox */
+  .terms input[type="checkbox"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid #d1005d;
+      border-radius: 5px;
+      margin-right: 10px;
+      cursor: pointer;
+  }
+  
+  /* Style for the checkbox when it is checked */
+  .terms input[type="checkbox"]:checked {
+      background-color: #ff5ba5;
+      border-color: #d1005d;
+  }
+
+
+
+    @media (max-width: 576px){
+
+
+
+
+
     }

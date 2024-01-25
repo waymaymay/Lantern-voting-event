@@ -49,8 +49,13 @@ function MyPage() {
           <div className="info-section"> 
                 <div className='notice-group' >
                     <div className='notice-one'>
-                        <div className='index-top top'>投票辦法</div>
-                        <div className='index-sub-light sub'>1. 以手機號碼投票,投票者每人每日1組手機號碼為1票。</div>
+                        <div className='top_group'>
+                            
+                            <div className='index-top top'>投票辦法</div>
+                            <hr className="my-divider" />
+                        </div>
+
+                        <div className='index-sub sub'>1. 以手機號碼投票,投票者每人每日1組手機號碼為1票。</div>
                         <div className='index-sub'>2. 活動結束後,票選前三名的區公所燈組,將從投此名單中各抽出10位民眾,獲得臺中市十大伴手禮(總計30份好禮)。</div>
                     </div>
                 <hr className="my-divider" />
@@ -59,10 +64,14 @@ function MyPage() {
                         <div className='index-top top'>抽獎結果公告</div>
                         <div className='index-sub'>2024年2月27日 (週二) 公布評比結果</div>
                         <div className='index-sub'>2024年3月01日 (週五) 公布伴手禮得獎名單</div>  
-                    </div>  
+                    </div>
+                    <label className="terms">
+                        <input type="checkbox" id="agree" />
+                            我已詳細閱讀且同意上述條款
+                    </label>
                 </div>
           </div>
-          <div className="footer">
+          <div className="person_data">
             {/* Footer content goes here */}
           </div>
         </div>
