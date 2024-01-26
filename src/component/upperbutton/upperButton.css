@@ -12,6 +12,7 @@
     bottom: 8%;
     position: fixed; /* 讓按鈕固定在螢幕上 */
     cursor: pointer;
+    z-index: 999;
 }
 
 

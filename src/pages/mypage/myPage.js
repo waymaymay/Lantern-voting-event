@@ -5,9 +5,23 @@ import UpperButton from '../../component/upperbutton/upperButton';
 import ClosePageButton from '../../component/closepagebutton/closePageButton';
 import WebPresent from '../../component/part/webPresent';
 import IssueText from '../../component/issuetext/IssueText';
+import VoteButton from '../../component/part/votebutton/VoteButton';
 
 import image101 from '../../images/contest/1山線-豐原區燈組.jpg';
 import image102 from '../../images/contest/1_2山線test.jpg';
+
+function toggleBodyScroll(isEnabled) {
+    if (isEnabled) {
+      document.body.style.overflow = 'hidden'; // Disable scrolling
+    } else {
+      document.body.style.overflow = 'auto'; // Enable scrolling
+    }
+  }
+  
+  // Call this function with `false` when you open `.notice-group` to scroll
+  // Call this function with `true` when you close `.notice-group`
+  
+
 
 function MyPage() {
     const header_pc = require('../../images/header_pc.png')
@@ -26,6 +40,10 @@ function MyPage() {
         introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
 
     };
+
+
+
+
 
     return (
       <div className="page-container">
@@ -100,9 +118,28 @@ function MyPage() {
         </div>
 
           <div className="person_data">
-            {/* Footer content goes here */}
+          <div class="input-group">
+                <label for="name">姓名：</label>
+                <input type="text" id="name" placeholder="您的姓名" />
+            </div>
+            <div class="input-group">
+                <label for="feedback">手機號碼：</label>
+                <input type="text" id="feedback" placeholder="您的手機號碼" />
+            </div>
+           
+                <label className="terms">
+                    <input type="checkbox" id="agree" />
+                        個資聲明及同意
+                </label>
+            
+
+            <div className='vote_button_page' > 
+                <VoteButton label={"投票"} />
+            </div>
+
+             </div>
           </div>
-        </div>
+        
     
     );
   }

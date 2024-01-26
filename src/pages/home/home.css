@@ -1,4 +1,8 @@
 
+body {
+  overscroll-behavior: none;
+}
+
 .banner_img{
     max-width: 100%;
     height: auto;  
@@ -14,6 +18,7 @@
 {
     display: block;
     width: 100%;
+    background-color: linear-gradient(to bottom, #FF119C, #E3007F);
 }
 
 .h5-banner
@@ -92,7 +97,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start; /* 靠左对齐 */
-    margin: 0 14% 2% 14%;
+    margin: 0 14% 2% 20%;
     max-width: 1024px;
 }
 
@@ -139,8 +144,10 @@
   .vote_button{
     display: flex;
     margin: 0 0 0 -1.5rem;
-    
   }
+
+
+
 
 
 @media (max-width: 576px) {
@@ -228,8 +235,7 @@
 
     .vote_button{
       display: flex;
-      margin-left: -15%;
-
+      margin-left: -38px;
      
     }
 

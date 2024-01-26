@@ -157,6 +157,7 @@
 
     @media (max-width: 576px){
       .contest_group_page{
+        /* min-height: 26%; */
         width: 100%;
         height:auto;
         display: flex;
@@ -169,19 +170,12 @@
         }
 
         .notice-group{
-          max-height: 28rem;
+          max-height: 30rem;
           overflow-y: auto;
           margin-bottom: 15px;
           padding: 0 20px;
-          display: flex;
-          justify-content: flex-start;
+    
 
-        }
-
-        .input-group {
-          margin-bottom: 15px;
-          padding: 0 20px;
-         
         }
 
         .input-group label,
@@ -196,12 +190,11 @@
           
         }
 
-        .vote_button_page{
-          margin-left: -4px;
-          margin-bottom: 26px;
-       
-          
-        }
+        .vote_button {
+          display: flex;
+          margin-left: 2%;
+          align-items: center;}
+
 
 
     }
