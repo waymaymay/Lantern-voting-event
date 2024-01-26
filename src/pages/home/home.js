@@ -41,6 +41,26 @@ function Home(){
 
     };
 
+    // const totalButtons = 28; // Adjust according to your actual number of buttons
+    // const buttonsPerRow = 7;
+    // const numberOfRows = 4; // Total number of rows you want
+    // const totalRequiredButtons = buttonsPerRow * numberOfRows;
+
+    // const placeholdersCount = totalRequiredButtons - totalButtons;
+    // const buttonElements = [];
+    // for (let i = 1; i <= totalButtons; i++) {
+    //     buttonElements.push(
+    //         <AreaButton key={i} className="col col-sm-2" number={i} text={`Button ${i}`} />
+    //     );
+    // }
+    // for (let i = 0; i < placeholdersCount; i++) {
+    //     buttonElements.push(
+    //         <div key={`placeholder-${i}`} className="col col-sm-2 invisible-placeholder" />
+    //     );
+    // }
+
+
+
     const navigate = useNavigate();
 
     const navigateToMyPage = () => {
@@ -104,7 +124,7 @@ function Home(){
                             <AreaButton className="col col-sm-2" number={26} text="西區區公所" />
                             <AreaButton className="col col-sm-2" number={27} text="北屯區公所" />
                             <AreaButton className="col col-sm-2" number={28} text="中區區公所" />
-
+                    
                         </div>
                     </div>
 
@@ -120,9 +140,6 @@ function Home(){
                                     <VoteButton label={"投下您的一票"} />
                                 </div>
                             </div>
-
-
-                        
                         </div>
 
                         <div className='contest_group_double'>
@@ -131,8 +148,12 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                 <IssueText {...issueTextContent} />
+                                <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <VoteButton label={"投下您的一票"} />
+                                </div>
                             </div>
                         </div>
+
 
                         <div className='contest_group'>
                             <div className='left_group'>

@@ -28,6 +28,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+.main-content{
+  width: 100%;
+  background-color: #FFEAF7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
@@ -38,9 +47,8 @@
     background-color: #fffafa;
     /* display: flex; */
     flex-direction: column;
-    margin: 20px; 
+    margin: 20px 40px; 
     padding: 12px;
-    
     }
 
     .my-divider-page {
@@ -48,14 +56,6 @@
       margin: 10px 0;
       opacity: 0.6;
     }
-
-    
-
-.my-divider {
-    border: 0.8px solid #C40E7A; 
-    /* margin: 12px 0; */
-    opacity: 0.6;
-  }
 
 .top{
   color: #C40E7A;
@@ -91,15 +91,16 @@
   letter-spacing: 0.64px;
   }
 
+
+  
   .contest_group_page{
-    /* min-height: 26%; */
+    padding : 3% 0 4.5% 0;
     width: 100%;
-    height:auto;
+    height: auto;
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
+ 
     background-color: #FFFFFF99;
-    padding-top: 3.5%;
-    padding-bottom: 4.5%;
 
     }
 
@@ -114,8 +115,6 @@
     .terms input[type="checkbox"] {
         margin-right: 10px;
     }
-
-
 
 
     .terms input[type="checkbox"]:checked + span {
@@ -144,6 +143,23 @@
 
 
     @media (max-width: 576px){
+      .contest_group_page{
+        /* min-height: 26%; */
+        width: 100%;
+        height:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #FFFFFF99;
+        padding-top: 3.5%;
+        padding-bottom: 4.5%;
+    
+        }
+
+
+
+      
+
 
 
 

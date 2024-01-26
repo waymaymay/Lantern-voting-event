@@ -10,7 +10,7 @@
     width: 1.8rem;
     height: 1.8rem;
     border-radius: 6px;
-    background-color: rgb(255, 0, 166);
+    background-color: rgb(205, 13, 126);
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
     font-weight: 700;
@@ -176,7 +176,7 @@ letter-spacing: 0.6px;
         width: 1.8rem;
         height: 1.8rem;
         border-radius: 6px;
-        background-color: rgb(255, 0, 166);
+        background-color: rgb(205, 13, 126);
         color: rgb(255, 255, 255);
         font-size: 1.2rem;
         font-weight: 700;
@@ -196,7 +196,7 @@ letter-spacing: 0.6px;
         letter-spacing: 0.6px;
         }
         
-        .h2{
+    .h2{
         color:#474747;
         font-family: Noto Sans TC;
         font-size: 1.3rem;

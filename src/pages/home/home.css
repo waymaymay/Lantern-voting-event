@@ -1,8 +1,7 @@
 
 .banner_img{
     max-width: 100%;
-    height: auto;
-    
+    height: auto;  
 }
 
 .banner{
@@ -11,12 +10,12 @@
   background-color: linear-gradient(to bottom, #FF119C, #E3007F);
 }
 
-
 .web-banner
 {
     display: block;
     width: 100%;
 }
+
 .h5-banner
 {
     display: none;
@@ -80,22 +79,27 @@
   letter-spacing: 0.64px;
   }
 
+  /* 原本
 .areabutton_group{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between; /* 水平分散排列 */
-    margin: 0.4em 0; 
-  } 
+    /* margin: 0.4em 0;  */
+  /* }  */ 
 
-
+  .areabutton_group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* 靠左对齐 */
+    margin: 0 14% 2% 14%;
+    max-width: 1024px;
+}
 
  .fir_line{
   display: flex;
   flex-direction: row;
-  margin: 0.82em 0;
-  justify-content: center;
-  
+  justify-content:flex-start;
   } 
 
 .contest_group{
@@ -103,20 +107,16 @@
   width: 100%;
   height:auto;
   display: flex;
-  align-items: flex-start;
   background-color: #FFFFFF99;
-  padding-top: 4%;
-  padding-bottom: 2%;
+  padding:3% 0 4.5% 0;
   }
 
 .contest_group_double{
   /* min-height: 30%; */
   width: 100%;
-  height: auto;
+  height:auto;
   display: flex;
-  align-items: flex-start;
-  padding-top: 4%;
-  padding-bottom: 2%;
+  padding:3% 0 4.5% 0;
   /* background-color: #FFFFFF99; */
   }
 
@@ -137,11 +137,10 @@
   }
 
   .vote_button{
-    text-indent: -3.8%;
+    display: flex;
+    margin: 0 0 0 -1.5rem;
+    
   }
-
-
-
 
 
 @media (max-width: 576px) {
@@ -175,35 +174,24 @@
         background-color: #FFEAF7;
     }
 
-
-
     .areabutton_group{
       max-width: 100%;
       overflow-x: scroll;
       white-space: nowrap;
-      justify-content:flex-start;
-      display: flex;
-      /* flex-direction: column; */
-      margin: 0 -4px;
-      /* align-items: center; */
-      gap: 0.5rem;
+      
 
     }
 
     .fir_line {
-      flex-wrap: nowrap;
+      margin: 0 0 16px 12px;
 
-      align-items: flex-start;
-      flex-direction: row;
- 
     }
-
 
     .contest_group {
       padding-top: 6%;
       width: 100%;
       height: auto;
-      display: flex;
+      display:flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -219,7 +207,6 @@
       align-items: center;
   }
 
-
     .left_group{
         width: 100%; 
         max-width: 85%; 
@@ -231,7 +218,7 @@
 
     .right_group {
         width: 100%; 
-        max-width: 875%;
+        max-width: 100%;
         height: auto;
         display: flex;
         justify-content: center;
@@ -239,6 +226,12 @@
         
     }
 
+    .vote_button{
+      display: flex;
+      margin-left: -15%;
+
+     
+    }
 
     
   }

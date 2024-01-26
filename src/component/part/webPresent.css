@@ -3,16 +3,13 @@
 .arrow-container {
   position: absolute;
   width: 100%; /* Make the container take full width */
-  bottom: 10px; /* Adjust the value as necessary to position below the image */
   text-align: center; /* Center the buttons */
-  bottom: -48px;
+  bottom:-3rem;
 }
 
 .arrow-button {
     position: absolute;
     bottom: -13%;
-    /* left: 84%;
-    transform: translateX(-20%); */
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -26,7 +23,7 @@
   }
   
   .right-arrow {
-    left: 100%; /* 調整右箭頭的位置 */
+    left: 102%; /* 調整右箭頭的位置 */
   }
 
   .arrow-button:hover {
@@ -36,24 +33,23 @@
   .web-present-container {
       position: relative;
       width: 100%;
-      /* margin-bottom: 5%; */
-      /* display: flex;
+      /* margin-bottom: 5%; 
+      display: flex;
       align-items: center;
-      justify-content: space-between; */
+      justify-content: space-between;  */
     
   }
 
   .web-present {
     position: relative;
-    /* other styles remain unchanged */
 }
 
   .dots-container {
       position: absolute;
       width: 100%;
-      bottom: -30px;
+      bottom:-2rem;
       text-align: center;
-      left: 123%;
+      left: 124%;
       transform: translateX(-50%);
       display: flex;
       gap: 36px;
@@ -79,48 +75,41 @@
 
 @media (max-width: 576px){ 
   .big_image{
-    margin-left:4%;
-    
+    margin-left:2.2%;
+}
+
+.arrow-container {
+  position: absolute;
+  width: 100%; /* Make the container take full width */
+  text-align: center; /* Center the buttons */
+  bottom:-3.2rem;
 }
 
 .arrow-button {
-  /* position: relative;
-  bottom: -11%;
-  left: 50%;
-  transform: translateX(-20%);
-  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  bottom: -13%;
   border: none;
   cursor: pointer;
-  color: rgb(155, 155, 155); */
-
-  position: relative;
-  /* bottom:-18.8rem; */
-  /* left: 92%; */
-  transform: translateX(-50%);
-  /* display: flex; */
-
-
-
-}
+  color: rgb(155, 155, 155);
+  font-size: 1.8rem;}
 
 .left-arrow {
   font-size: 1.6rem;
-  left: 30%; /* 調整左箭頭的位置 */
+  left: 26%; /* 調整左箭頭的位置 */
 } 
 
 .right-arrow {
   font-size: 1.6rem;
-  left: 65%; /* 調整右箭頭的位置 */
+  left: 64%; /* 調整右箭頭的位置 */
 }
 
 .dots-container {
   position: relative;
-  bottom:-0.8rem;
+  bottom: -0.01rem;
   left: 92%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 36px;
+  
 }
+
 
 .dot {
   width: 10px;
@@ -134,4 +123,5 @@
   background-color: #6f6f6f;
 }
   
+
 }
