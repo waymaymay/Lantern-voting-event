@@ -8,7 +8,7 @@ const ClosePageButton = () => {
 
   return (
     <button className='ClosePageButton' onClick={handleClosePage}>
-      X
+     關閉
     </button>
   );
 };

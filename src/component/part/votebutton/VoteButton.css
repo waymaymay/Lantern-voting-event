@@ -1,5 +1,5 @@
     .leave-Button{
-        width: 22.5rem;
+        width: 23rem;
         height: 3.125rem;
         background-color: #FFC91A;
         color: #1C1B1B;
@@ -7,8 +7,8 @@
         border: none;
         cursor: pointer;
         font-size: 1rem;
-        border-radius: px;
-        margin: 16px;
+        border-radius: 6px;
+        margin: 16px 0 ;
 
     }
     
@@ -19,14 +19,14 @@
 
 @media (max-width: 576px){
     .leave-Button{
-        width: 21rem;
+        width: 20rem;
         height: 3.125rem;;
         background-color: #FFC91A;
         color: #1C1B1B;
         border: none;
         cursor: pointer;
-        font-size: 1.1rem;
-        border-radius: 5px;
+        font-size: 1.05rem;
+        border-radius: 6px;
         /* margin: 20px 5px 20px 20px; */
        }
     

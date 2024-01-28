@@ -1,6 +1,12 @@
 
 body {
   overscroll-behavior: none;
+  background-color: #FFEAF7;
+}
+
+.row{
+  
+
 }
 
 .banner_img{
@@ -44,7 +50,8 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 20px 36px;
-    margin: 20px 0;
+    margin: 20px 20px;
+    width: auto;
     }
 
 .my-divider {
@@ -97,7 +104,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start; /* 靠左对齐 */
-    margin: 0 14% 2% 20%;
+    margin: 0 14% 2% 18.2%;
     max-width: 1024px;
 }
 
@@ -108,42 +115,53 @@ body {
   } 
 
 .contest_group{
-  /* min-height: 26%; */
-  width: 100%;
-  height:auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  height: auto;
   background-color: #FFFFFF99;
-  padding:3% 0 4.5% 0;
+  padding:3% 2% 4.5% 0;
   }
 
 .contest_group_double{
-  /* min-height: 30%; */
   width: 100%;
   height:auto;
   display: flex;
-  padding:3% 0 4.5% 0;
   /* background-color: #FFFFFF99; */
+  padding:3% 0 4.5% 0;
   }
+
+
 
 .left_group{
-  width:100%;
+  flex:1;
+  padding-left: 20px;
   max-width: 38.376%;
+  /* width:100%;
+  max-width: 38.376%;
+  display: flex; */
   height: auto;
   }
 
+
 .right_group{
-  width: 100%;
-  max-width: 42%;
+  flex: 1;
+  padding-left: 26px;
+  width: 100%; 
+  max-width: 46%;
   height: auto;
   position: relative;
-  right: -15%;
   margin-top: -5px;
-
+  margin: 0 0 0 12%;
   }
 
   .vote_button{
-    display: flex;
-    margin: 0 0 0 -1.5rem;
+    padding: 0px;
+    position: relative;
+   
   }
 
 
@@ -155,7 +173,6 @@ body {
   .layout{
     width: 100%;
     overflow-x: hidden;
-    
   }
 
     .web-banner{
@@ -165,14 +182,12 @@ body {
     .h5-banner{
         display: block;
         width: 100%;
-        
     }
 
     .banner{
       width: 100%;
       height: auto;
       background-color: linear-gradient(to bottom, #FF119C, #E3007F);
-      
     }
 
     .main-content{
@@ -185,23 +200,21 @@ body {
       max-width: 100%;
       overflow-x: scroll;
       white-space: nowrap;
-      
+      margin: 0px 8px 0px 0px;
 
     }
-
-    .fir_line {
-      margin: 0 0 16px 12px;
-
-    }
+   .fir_line {
+      padding: 0 0 16px 20px;
+     
+    } 
 
     .contest_group {
-      padding-top: 6%;
+      padding-top: 5%;
       width: 100%;
       height: auto;
       display:flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      flex-direction: column;
       background-color: #FFFFFF99;
   }
 
@@ -223,20 +236,26 @@ body {
        
     }
 
+    
     .right_group {
         width: 100%; 
         max-width: 100%;
         height: auto;
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        
+        position: relative;
+        margin-top: -5px;
+        margin: 0 0 0 12%;
+        flex: 1;
+        padding-left: 0;
+        margin-right: 30px
     }
 
     .vote_button{
+      padding: 0px;
       display: flex;
-      margin-left: -38px;
-     
+      justify-content: center;
+      
     }
 
     

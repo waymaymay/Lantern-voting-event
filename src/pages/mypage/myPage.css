@@ -1,7 +1,6 @@
 .banner_img{
     max-width: 100%;
     height: auto;
-    
 }
 
 .header{
@@ -29,6 +28,7 @@
     flex-direction: column;
     align-items: center;
     max-width: 100%;
+    height: max-content;
     overflow-x: hidden;
     }
 
@@ -104,7 +104,6 @@
 
     .terms input[type="checkbox"] {
         margin-right: 10px;
-    
     }
 
 
@@ -120,7 +119,7 @@
       width: 20px;
       height: 20px;
       border: 1.5px solid #d1005d;
-      border-radius: 5px;
+      border-radius: 6px;
       margin-right: 10px;
       cursor: pointer;
   }
@@ -134,6 +133,7 @@
 
   .input-group {
     margin-bottom: 15px;
+    
    
   }
   
@@ -149,13 +149,24 @@
     margin-bottom: 10px;
     border: 1px solid #ccc;
     background-color: #ffffff5f;
-    border-radius: 6px;
+    /* border-radius: 6px; */
   }
 
 
 
 
     @media (max-width: 576px){
+
+      .pc-banner
+      {
+          display: none;
+      }
+      .mb-banner
+      {
+        display: block;
+        width: 100%;
+      }
+
       .contest_group_page{
         width: 100%;
         height:auto;
@@ -196,10 +207,17 @@
           
         }
 
+        .terms {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 8px;
+          padding-top: 10px;
+      }
+
         .vote_button_page{
           margin-left: -4px;
           margin-bottom: 26px;
-       
           
         }
 

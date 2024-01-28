@@ -1,77 +1,67 @@
 import React from 'react';
-import '../../pages/mypage/thanksPage.css'
+import '../../pages/thankspage/thanksPage.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
 import ClosePageButton from '../../component/closepagebutton/closePageButton';
 import WebPresent from '../../component/part/webPresent';
 import IssueText from '../../component/issuetext/IssueText';
 import VoteButton from '../../component/part/votebutton/VoteButton';
+import { useNavigate } from 'react-router-dom';
 
-import image101 from '../../images/contest/1山線-豐原區燈組.jpg';
-import image102 from '../../images/contest/1_2山線test.jpg';
 
-function MyPage() {
+function toggleBodyScroll(isEnabled) {
+    if (isEnabled) {
+      document.body.style.overflow = 'hidden'; // Disable scrolling
+    } else {
+      document.body.style.overflow = 'auto'; // Enable scrolling
+    }
+  }
+  
+
+function ThanksPage() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
-      // 圖片區
-    const carouselImages1 =[image101 , image102]; 
+    const navigate = useNavigate();
 
-
-    //文案區
-    const issueTextContent = {
-        topTitle: '豐山線-山城龍賀尞',
-        itemNumber: 1,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
-
+    const handleVoteClick = () => {
+        navigate('/'); // Use the route you defined for MyPage component
     };
 
 
-
-
-
     return (
-      <div className="page-container">
-        <div className="scroll-container">
-            <div className="header">
-                <div className='banner_img'>
-                    <img src= {header_pc} alt=" " className='header pc-banner'/>
-                    <img src= {header_mb} alt=' ' className='header mb-banner'/>
-                </div>
+        <div className="page-container">
+          <div className="scroll-container">
+              <div className="header">
+                  <div className='banner_img'>
+                      <img src= {header_pc} alt=" " className='header pc-banner'/>
+                      <img src= {header_mb} alt=' ' className='header mb-banner'/>
+                  </div>
+              </div>
+              
+              <div className="content">
+              <div className="info-section"> 
+                      <div className='notice-group' >
+                          <div className='notice-one'>
+                          </div>
+  
+                          <div className='notice-four'>
+                              <div className='index-sub'>您已完成投票，感謝您</div>
+                          </div>
+                      </div>
+              </div>
             </div>
-            
-            <div className="content">
-                <div className='contest_group_page'>
-                    <div className='left_group'>
-                        < WebPresent images ={carouselImages1}/>
-                    </div>
-                    <div className='right_group'>
-                        <IssueText {...issueTextContent} />
-                    </div>
-                </div>
+          </div>
+  
+            <div className="person_data">
+            <div className='vote_button_page' > 
+                <VoteButton label={"離開"} onClick={handleVoteClick}  />
             </div>
-            <div className="info-section"> 
-                    <div className='notice-group' >
-                        <div className='notice-one'>
-                            <div className='top_group'>
-                                <div className='index-top top'>投票辦法</div>
-                                <hr className="my-divider-page" />
-                            </div>
-
-                            <div className='index-sub sub'>1. 以手機號碼投票, 投票者每人每日1組手機號碼為1票。</div>
-                            <div className='index-sub'>2. 活動結束後, 票選前三名的區公所燈組, 將從投此名單中各抽出10位民眾, 獲得臺中市十大伴手禮(總計30份好禮)。</div>
-                            <div className='index-sub'>3. 活動將於2024.2.27(二) 公布評比結果, 2024.3.1(五) 公布伴手禮得獎名單。</div>
-                        </div>
-
-                    </div>
             </div>
         </div>
-    </div>
-        
-    
-    );
+          
+      
+      );
   }
   
-  export default MyPage;
+  export default ThanksPage;

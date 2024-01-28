@@ -1,0 +1,272 @@
+.banner_img{
+  max-width: 100%;
+  height: auto;
+}
+
+.header{
+width: 100%;
+height: auto;
+border-radius: var(--box-shadow, 0px);
+background: var(--op-bannerBk, linear-gradient(180deg, #FF119C 0%, #E3007F 100%));
+}
+
+
+.pc-banner
+{
+  display: block;
+  width: 100%;
+}
+.mb-banner
+{
+  display: none;
+}
+
+.page-container{
+
+  background-color: #FFEAF7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  overflow-x: hidden;
+  }
+
+
+.main-content{
+width: 100%;
+background-color: #FFEAF7;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.notice-group{
+  border-radius: 12px;
+  border: 1.5px solid #CD0D7E;
+  width:auto;
+  background-color: #fffafa;
+  /* display: flex; */
+  flex-direction: column;
+  margin: 20px; 
+  padding: 12px;
+
+  }
+
+.my-divider-page {
+  border: 0.8px solid #C40E7A; 
+  margin: 10px 0;
+  opacity: 0.6;
+  }
+
+.top{
+color: #C40E7A;
+font-family: Noto Sans TC;
+font-size: 1rem;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 30px */
+letter-spacing: 0.8px;
+padding-top: 12px;
+display: flex;
+justify-content:flex-start;
+
+}
+
+.index-sub{
+color: var(--content-placeholder-off, #474747);
+font-family: Noto Sans TC;
+font-size: 0.9rem;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: 0.64px;
+}
+
+.contest_group_page{
+  padding : 3% 0 4.5% 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFFF99;
+  }
+
+
+  .terms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  padding-top: 10px;
+}
+
+  .terms input[type="checkbox"] {
+      margin-right: 10px;
+  
+  }
+
+
+  .terms input[type="checkbox"]:checked + span {
+    text-decoration: underline;
+}
+
+/* Optional: Add custom styles for the checkbox */
+.terms input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #d1005d;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Style for the checkbox when it is checked */
+.terms input[type="checkbox"]:checked {
+    background-color: #FFD43C;
+    border-color: #d1005d;
+}
+
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label,
+.checkbox-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input[type="text"]{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  background-color: #ffffff5f;
+  /* border-radius: 6px; */
+}
+
+
+
+.thanks_data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thanks_top{
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 20%;
+}
+
+
+
+
+  @media (max-width: 576px){
+
+    .pc-banner
+    {
+        display: none;
+    }
+    .mb-banner
+    {
+      display: block;
+      width: 100%;
+    }
+
+    .contest_group_page{
+      width: 100%;
+      height:auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #FFFFFF99;
+      padding-top: 3.5%;
+      padding-bottom: 4.5%;
+  
+      }
+
+      .notice-group{
+        max-height: 28rem;
+        overflow-y: auto;
+        margin-bottom: 15px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: flex-start;
+
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+        padding: 0 20px;
+       
+      }
+
+      .input-group label,
+      .checkbox-group label {
+        font-size: 14px;
+      
+      }
+
+      .input-group input[type="text"],
+      .checkbox-group input[type="checkbox"] {
+        padding: 8px;
+        
+      }
+
+      .terms {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+        padding-top: 10px;
+    }
+
+      .vote_button_page{
+        margin-left: -4px;
+        margin-bottom: 26px;
+        
+        
+      }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 576px){
+
+    .pc-banner
+    {
+      display: none;
+    }
+
+
+    .mb-banner
+    {
+      display: block;
+      width: 100%;
+    }
+
+      
+
+ 
+
+
+  }

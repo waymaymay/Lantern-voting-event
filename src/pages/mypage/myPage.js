@@ -6,7 +6,7 @@ import ClosePageButton from '../../component/closepagebutton/closePageButton';
 import WebPresent from '../../component/part/webPresent';
 import IssueText from '../../component/issuetext/IssueText';
 import VoteButton from '../../component/part/votebutton/VoteButton';
-
+import { useNavigate } from 'react-router-dom';
 import image101 from '../../images/contest/1山線-豐原區燈組.jpg';
 import image102 from '../../images/contest/1_2山線test.jpg';
 
@@ -18,10 +18,6 @@ function toggleBodyScroll(isEnabled) {
     }
   }
   
-  // Call this function with `false` when you open `.notice-group` to scroll
-  // Call this function with `true` when you close `.notice-group`
-  
-
 
 function MyPage() {
     const header_pc = require('../../images/header_pc.png')
@@ -41,7 +37,11 @@ function MyPage() {
 
     };
 
+    const navigate = useNavigate();
 
+    const handleVoteClick = () => {
+        navigate('/ThanksPage'); // Use the route you defined for MyPage component
+    };
 
 
 
@@ -134,7 +134,7 @@ function MyPage() {
             
 
             <div className='vote_button_page' > 
-                <VoteButton label={"投票"} />
+                <VoteButton label={"投票"} onClick={handleVoteClick}  />
             </div>
 
              </div>
