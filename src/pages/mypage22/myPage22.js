@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../pages/mypage22/myPage22.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
@@ -53,17 +53,21 @@ function MyPage22() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
       // 圖片區
     const carouselImages23 =[image2301]; 
 
 
     //文案區
     const issueTextContent = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '屯區-屯區龍賀踅',
         itemNumber: 23,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
+        mainTitle: '大里區公所',
+        groupName: '「杙」遊大里好風華',
+        introduce1: '「一府、二鹿、三艋舺、四諸羅、五竹塹、六大里杙」；大里舊稱「大里杙」，是台灣早年六大繁榮都市之一，足證大里早年繁華風光的歲月。',
 
     };
 

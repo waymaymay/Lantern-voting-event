@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../pages/mypage23/myPage23.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
@@ -53,17 +53,21 @@ function MyPage23() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
       // 圖片區
     const carouselImages24 =[image2401]; 
 
 
     //文案區
     const issueTextContent = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '屯區-屯區龍賀踅',
         itemNumber: 24,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
+        mainTitle: '太平區公所',
+        groupName: '龍馬精神 光耀太平',
+        introduce1: '以太平當紅的新建設馬卡龍公園為設計主體,主體內裝滿在地水果呈現太平的物產豐碩。而長安醫院化身為白龍隨身掛著聽診器守護民眾的健康，太平的獨有的枇杷寶寶與毛小孩嬉戲其中，整座園區洋溢在幸福歡樂的氛圍中，襯托出富市臺中&新好太平的意象。',
 
     };
 

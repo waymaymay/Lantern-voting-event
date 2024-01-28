@@ -180,13 +180,14 @@ function Home(){
         mainTitle: '西屯區公所',
         groupName: '幸福臺中 琴定西屯',
         introduce1: '以科湳愛琴橋為主燈，周邊環繞中央公園四大重要建設及逢甲商圈經典美食，在浪漫燈光下，展現城市美好願景。',
+
     };
 
     const issueTextContent13 = {
         topTitle: '城區-城區龍幸福',
         itemNumber: 13,
         mainTitle: '北區區公所',
-        groupName: '富市臺中 陽光北',
+        groupName: '富市臺中 陽光北區',
         introduce1: '以科博館超人氣恐龍搭乘臺中捷運輕旅行的主題意象，邀請大家一起來北區開趴!',
     };
 
@@ -211,7 +212,9 @@ function Home(){
         itemNumber: 16,
         mainTitle: '潭子區公所',
         groupName: '點亮潭心 幸福潭子',
-        introduce1: '活躍潭子 - 潭心鐵馬空橋跳躍曲線 / 永續潭子 - 竹筍 馬鈴薯 四周柿 / 樂活潭子 -  自行車 蝴蝶 花卉',
+        introduce1: `活躍潭子 - 潭心鐵馬空橋跳躍曲線 / 
+        永續潭子 - 竹筍 馬鈴薯 四周柿 / 
+        樂活潭子 - 自行車 蝴蝶 花卉`,
     };
 
     const issueTextContent17 = {
@@ -357,9 +360,6 @@ function Home(){
 
 
     const navigate = useNavigate();
-    // const navigateToMyPage = () => {
-    //     navigate('/MyPage'); // Use the route you defined for MyPage component
-    // };
 
     const navigateToMyPage = (pageSuffix='') => {
         navigate(`/MyPage${pageSuffix}`); // Dynamically navigate based on the suffix

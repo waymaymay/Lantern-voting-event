@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../pages/mypage17/myPage17.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
@@ -53,17 +53,21 @@ function MyPage17() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
       // 圖片區
     const carouselImages18 =[image1801]; 
 
 
     //文案區
     const issueTextContent = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '山線-山城龍賀尞',
         itemNumber: 18,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
+        mainTitle: '東勢區公所',
+        groupName: '遇見新丁粄in東勢',
+        introduce1: '由數百個小型的提燈組成巨大的新丁粄，每個提燈都呈現出新丁粄的造型，代表著由許多新生兒的誕生匯集組成的團結的社群。作品展現了東勢的文化特色。',
 
     };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../pages/mypage13/myPage13.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
@@ -53,17 +53,21 @@ function MyPage13() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
       // 圖片區
     const carouselImages14 =[image1401]; 
 
 
     //文案區
     const issueTextContent = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '城區-城區龍幸福',
         itemNumber: 14,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
+        mainTitle: '東區區公所',
+        groupName: '樂來東區 月見幸福',
+        introduce1: '以東區在地信仰中心-三級古蹟樂成宮為主燈意象設計，Q版媽祖及月老為輔更能加深東區在地最不可或缺的精神指標塑造東區特有區域特色與意象。',
 
     };
 

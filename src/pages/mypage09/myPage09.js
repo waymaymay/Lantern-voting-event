@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../pages/mypage09/myPage09.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
@@ -52,6 +52,10 @@ function toggleBodyScroll(isEnabled) {
 function MyPage09() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
       // 圖片區
     const carouselImages10 =[image1001]; 

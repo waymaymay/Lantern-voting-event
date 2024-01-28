@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../pages/mypage18/myPage18.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
@@ -53,17 +53,21 @@ function MyPage18() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
       // 圖片區
     const carouselImages19 =[image1901]; 
 
 
     //文案區
     const issueTextContent = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '山線-山城龍賀尞',
         itemNumber: 19,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
+        mainTitle: '神岡區公所',
+        groupName: '燈門拜訪 訪神岡',
+        introduce1: '龍來神岡串好運，認識神岡招牌「五馬文化」，霓虹燈與接地氣的台派精神帶來「神龍」好運年。',
 
     };
 

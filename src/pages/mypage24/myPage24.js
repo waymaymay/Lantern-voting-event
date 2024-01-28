@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../pages/mypage24/myPage24.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
@@ -53,17 +53,21 @@ function MyPage24() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
       // 圖片區
     const carouselImages25 =[image2501]; 
 
 
     //文案區
     const issueTextContent = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '城區-城區龍幸福',
         itemNumber: 25,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
+        mainTitle: '南區區公所',
+        groupName: '花灑南區 勒在騎中',
+        introduce1: '興大園道的阿勃勒，展現浪漫黃金花雨；吉祥物阿柴、狗頭火柴盒象徵著「番仔火的故鄉」；綠空廊道保留了舊鐵道遺產，是散步、騎自行車的休閒好去處！',
 
     };
 

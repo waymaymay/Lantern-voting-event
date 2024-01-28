@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../pages/mypage25/myPage25.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
@@ -49,21 +49,25 @@ function toggleBodyScroll(isEnabled) {
   }
   
 
-function MyPage03() {
+function MyPage25() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
       // 圖片區
-    const carouselImages3 =[image301]; 
+    const carouselImages26 =[image2601]; 
 
 
     //文案區
     const issueTextContent = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '城區-城區龍幸福',
         itemNumber: 26,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
+        mainTitle: '西區區公所',
+        groupName: '舞動活力 龍躍西區',
+        introduce1: '以西區2大特色主軸：臺中市役所及臺中爵士音樂節為設計概念，並結合龍年意象為主角，以薩克斯風、爵士鼓、大提琴、歌唱呈現整個爵士音樂的氛圍，再配合互動感應發出爵士搖擺樂曲，讓人在新舊共榮城市中，感受歡慶元宵佳節快樂氣氛。 藝術家名字｜張明璇、黃永祥 贊助單位｜麻園頭福德祠',
 
     };
 
@@ -88,7 +92,7 @@ function MyPage03() {
             <div className="content">
                 <div className='contest_group_page'>
                     <div className='left_group'>
-                        < WebPresent images ={carouselImages3}/>
+                        < WebPresent images ={carouselImages26}/>
                     </div>
                     <div className='right_group'>
                         <IssueText {...issueTextContent} />
@@ -174,4 +178,4 @@ function MyPage03() {
     );
   }
   
-  export default MyPage03;
+  export default MyPage25;

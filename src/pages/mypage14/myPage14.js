@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../pages/mypage14/myPage14.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
@@ -53,17 +53,21 @@ function MyPage14() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
       // 圖片區
     const carouselImages15 =[image1501]; 
 
 
     //文案區
     const issueTextContent = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '山線-山城龍賀尞',
         itemNumber: 15,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
+        mainTitle: '新社區公所',
+        groupName: '花現新世界 燈提逛新社',
+        introduce1: '花燈設計以「農特產品」及「休閒旅遊」為發想，新社生命之水-白冷圳倒虹吸管水利設施貫穿山丘場景，融入新社花海旁蝴蝶飛舞、香菇寶寶、葡萄公主歡樂氛圍，感受「花現心視界 燈提逛新社」美好遊程。',
 
     };
 

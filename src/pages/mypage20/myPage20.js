@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../pages/mypage20/myPage20.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
@@ -53,17 +53,21 @@ function MyPage20() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
       // 圖片區
     const carouselImages21 =[image2101]; 
 
 
     //文案區
     const issueTextContent = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '海線-海線龍樂活',
         itemNumber: 21,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
+        mainTitle: '外埔區公所',
+        groupName: '外埔金黃大道來報喜',
+        introduce1: '以外埔之光～蜜蜂、海芋造型燈海及紅龍果交織而成的忘憂谷美景，透過燈光及再生材料堆疊製作，搭配燈光藝術展示並融合SDGs氣候行動議題，強調自然和諧環境保護及氣候變遷之重要性。',
 
     };
 

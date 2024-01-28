@@ -40,21 +40,25 @@ function ThanksPage() {
               </div>
               
               <div className="content">
-              <div className="info-section"> 
-                      <div className='notice-group' >
+              <div className="info-section">
+                      {/* <div className='notice-group' >
+                       
                           <div className='notice-one'>
                           </div>
   
-                          <div className='notice-four'>
-                              <div className='index-sub'>您已完成投票，感謝您</div>
-                          </div>
-                      </div>
+                  
+                      </div> */}
               </div>
             </div>
           </div>
   
             <div className="person_data">
             <div className='vote_button_page' > 
+            <div className='thanks_data'>
+            您已完成投票，感謝您
+
+            </div>
+            
                 <VoteButton label={"離開"} onClick={handleVoteClick}  />
             </div>
             </div>

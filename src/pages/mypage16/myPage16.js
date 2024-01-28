@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../pages/mypage16/myPage16.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
@@ -53,17 +53,27 @@ function MyPage16() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
       // 圖片區
     const carouselImages17 =[image1701]; 
 
 
     //文案區
     const issueTextContent = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '山線-山城龍賀尞',
         itemNumber: 17,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
+        mainTitle: '后里區公所',
+        groupName: '共譜后里新樂章 和諧共生的旋律',
+        introduce1: `后里區有文化古蹟自然美景氣候宜人，是「薩克斯風」的故鄉、「百合花卉」、「高接梨」、「葡萄 紅酒」及「后里馬場」代表著后里的特色區域品牌。
+        「梨寶」「花妞」吉祥物寶寶是最佳代言人：帥氣的梨寶騎著來自后里馬場的駿馬，吹奏著薩克斯風；嫵媚的花妞品嚐著冠軍級葡萄美酒，欣賞著后里盛產的花卉與水果；馬車是由廢棄高接梨樹枝所構成，提醒經濟循環的重要性，詮釋出在充滿音樂人文薈萃及富饒農產的城區裡，希望能喚起對環境及氣候問題，重視永續經營愛護地球資源，在人與大自然的生存與發展中取的平衡，共存共榮中共享資源。
+        
+        展現SDGs項目：
+        SDGs2農業多樣性-確保糧食安全，消除飢餓，促進永續農業
+        SDGs8就業與經濟成長-透過燈會平台，促進地方文化與經濟
+        SDGs13氣候行動-使用再生材料製作燈組`,
 
     };
 

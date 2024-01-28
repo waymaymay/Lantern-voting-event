@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../pages/mypage19/myPage19.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
@@ -53,17 +53,21 @@ function MyPage19() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
       // 圖片區
     const carouselImages20 =[image2001]; 
 
 
     //文案區
     const issueTextContent = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '海線-海線龍樂活',
         itemNumber: 20,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
+        mainTitle: '大甲區公所',
+        groupName: '芋見大甲 珍馨愛藺',
+        introduce1: '以大甲農會芋頭娃娃「芋妮」及「裕珍馨」 Q版奶油酥餅人，結合大甲百年藺編文化，頭戴藺草帽，手拿桿麵棍、春聯舞動，呈現豐富趣味畫面。',
 
     };
 
