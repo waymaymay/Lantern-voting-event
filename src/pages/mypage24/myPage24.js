@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../pages/mypage/myPage.css'
+import '../../pages/mypage24/myPage24.css'
 import AreaButton from '../../component/areabutton/areaButton';
 import UpperButton from '../../component/upperbutton/upperButton';
 import ClosePageButton from '../../component/closepagebutton/closePageButton';
@@ -49,18 +49,18 @@ function toggleBodyScroll(isEnabled) {
   }
   
 
-function MyPage() {
+function MyPage24() {
     const header_pc = require('../../images/header_pc.png')
     const header_mb = require('../../images/header_mb.png')
 
       // 圖片區
-    const carouselImages1 =[image101 , image102]; 
+    const carouselImages25 =[image2501]; 
 
 
     //文案區
     const issueTextContent = {
         topTitle: '豐山線-山城龍賀尞',
-        itemNumber: 1,
+        itemNumber: 25,
         mainTitle: '豐原區公所',
         groupName: '美樂豐原 龍耀葫蘆墩',
         introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早的廟宇及信仰中心',
@@ -88,7 +88,7 @@ function MyPage() {
             <div className="content">
                 <div className='contest_group_page'>
                     <div className='left_group'>
-                        < WebPresent images ={carouselImages1}/>
+                        < WebPresent images ={carouselImages25}/>
                     </div>
                     <div className='right_group'>
                         <IssueText {...issueTextContent} />
@@ -174,4 +174,4 @@ function MyPage() {
     );
   }
   
-  export default MyPage;
+  export default MyPage24;

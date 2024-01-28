@@ -11,7 +11,9 @@ import UpperButton from '../../component/upperbutton/upperButton';
 import ClosePageButton from '../../component/closepagebutton/closePageButton';
 import WebPresent from '../../component/part/webPresent';
 import IssueText from '../../component/issuetext/IssueText';
-import MyPage from '../mypage/myPage';
+import MyPage00 from '../mypage00/myPage00';
+import MyPage01 from '../mypage01/myPage01'
+import MyPage02 from '../mypage02/myPage02'
 import VoteButton from '../../component/part/votebutton/VoteButton';
 
 
@@ -111,7 +113,7 @@ function Home(){
     const issueTextContent4 = {
         topTitle: '海線-海線龍樂活',
         itemNumber: 4,
-        mainTitle: '豐原區公所',
+        mainTitle: '沙鹿區公所',
         groupName: '農鹿Shalu一鹿發',
         introduce1: '以「鹿角」輔以拍瀑拉圖騰為花燈基底，並放置農特產品，呈現「大地之母所賜禮物」，鹿寶身穿沙轆社服飾，凸顯地方農業與文化特色。',
     };
@@ -355,9 +357,14 @@ function Home(){
 
 
     const navigate = useNavigate();
-    const navigateToMyPage = () => {
-        navigate('/MyPage'); // Use the route you defined for MyPage component
+    // const navigateToMyPage = () => {
+    //     navigate('/MyPage'); // Use the route you defined for MyPage component
+    // };
+
+    const navigateToMyPage = (pageSuffix='') => {
+        navigate(`/MyPage${pageSuffix}`); // Dynamically navigate based on the suffix
     };
+
 
 
     return (
@@ -429,7 +436,7 @@ function Home(){
                                
                             <div className='right_group'>
                                     <IssueText {...issueTextContent1} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('00')} > 
                                     <VoteButton label={"投下您的一票"} />
                                     </div>
                             </div>
@@ -442,7 +449,7 @@ function Home(){
                             
                                 <div className='right_group'>
                                     <IssueText {...issueTextContent2} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('01')} > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -454,7 +461,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent3} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('02')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -466,7 +473,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent4} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('03')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -478,7 +485,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent5} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('04')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -490,7 +497,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent6} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('05')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -502,7 +509,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent7} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('06')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -514,7 +521,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent8} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('07')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -526,7 +533,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent9} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('08')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -538,7 +545,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent10} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('09')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -550,7 +557,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent11} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('10')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -562,7 +569,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent12} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('11')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -574,7 +581,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent13} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('12')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -586,7 +593,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent14} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('13')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -598,7 +605,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent15} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('14')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -610,7 +617,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent16} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('15')} > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -622,7 +629,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent17} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('16')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -634,7 +641,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent18} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('17')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -646,7 +653,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent19} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('18')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -658,7 +665,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent20} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('19')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -670,7 +677,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent21} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('20')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -682,7 +689,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent22} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('21')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -694,7 +701,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent23} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('22')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -706,7 +713,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent24} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('23')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -718,7 +725,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent25} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('24')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -730,7 +737,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent26} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('25')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -742,7 +749,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent27} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('26')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
@@ -754,7 +761,7 @@ function Home(){
                             </div>
                             <div className='right_group'>
                                     <IssueText {...issueTextContent28} />
-                                    <div className='vote_button' onClick={navigateToMyPage} > 
+                                    <div className='vote_button' onClick={()=>navigateToMyPage('27')}  > 
                                             <VoteButton label={"投下您的一票"} />
                                     </div>
                                 </div>
