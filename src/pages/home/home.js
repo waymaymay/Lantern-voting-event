@@ -1,8 +1,9 @@
-import React from 'react';
+import React , { useRef, useEffect } from 'react';
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import '../../pages/home/home.css';
 import AreaButton from '../../component/areabutton/areaButton';
@@ -52,7 +53,7 @@ function Home(){
     const banner_h5 = require('../../images/H5-index-banner.png')
     
     // 圖片區
-    const carouselImages1 =[image101 , image102]; 
+    const carouselImages1 =[image101]; 
     const carouselImages2 =[image201 ]; 
     const carouselImages3 =[image301 ]; 
     const carouselImages4 =[image401 ]; 
@@ -82,7 +83,6 @@ function Home(){
     const carouselImages28 =[image2801 ]; 
 
 
-
     //文案區
     const issueTextContent1 = {
         topTitle: '豐山線-山城龍賀尞',
@@ -97,7 +97,7 @@ function Home(){
         itemNumber: 2,
         mainTitle: '石岡區公所',
         groupName: '幸福臺中 愛來石岡',
-        introduce1: '吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早吉祥物-福蘆妹,葫蘆墩圳為中部最老的灌溉水圳之一, 慈濟宮-豐原最早',
+        introduce1: '（待補）',
     };
 
     const issueTextContent3 = {
@@ -218,99 +218,143 @@ function Home(){
         mainTitle: '共譜后里新樂章 和諧共生的旋律',
         groupName: '美樂豐原 龍耀葫蘆墩',
         introduce1: `后里區有文化古蹟自然美景氣候宜人
-        是「薩克斯風」的故鄉`,
+        是「薩克斯風」的故鄉、「百合花卉」、「高接梨」、「葡萄 紅酒」及「后里馬場」代表著后里的特色區域品牌。
+        「梨寶」「花妞」吉祥物寶寶是最佳代言人：帥氣的梨寶騎著來自后里馬場的駿馬，吹奏著薩克斯風；嫵媚的花妞品嚐著冠軍級葡萄美酒，欣賞著后里盛產的花卉與水果；馬車是由廢棄高接梨樹枝所構成，提醒經濟循環的重要性，詮釋出在充滿音樂人文薈萃及富饒農產的城區裡，希望能喚起對環境及氣候問題，重視永續經營愛護地球資源，在人與大自然的生存與發展中取的平衡，共存共榮中共享資源。
+        展現SDGs項目：
+        SDGs2農業多樣性-確保糧食安全，消除飢餓，促進永續農業
+        SDGs8就業與經濟成長-透過燈會平台，促進地方文化與經濟
+        SDGs13氣候行動-使用再生材料製作燈組。`,
     };
 
     const issueTextContent18 = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '山線-山城龍賀尞',
         itemNumber: 18,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '',
+        mainTitle: '東勢區公所',
+        groupName: '遇見新丁粄in東勢',
+        introduce1: '由數百個小型的提燈組成巨大的新丁粄，每個提燈都呈現出新丁粄的造型，代表著由許多新生兒的誕生匯集組成的團結的社群。作品展現了東勢的文化特色。',
     };
 
     const issueTextContent19 = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '山線-山城龍賀尞',
         itemNumber: 19,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '',
+        mainTitle: '神岡區公所',
+        groupName: '燈門拜訪 訪神岡',
+        introduce1: '龍來神岡串好運，認識神岡招牌「五馬文化」，霓虹燈與接地氣的台派精神帶來「神龍」好運年。',
     };
 
     const issueTextContent20 = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '海線-海線龍樂活',
         itemNumber: 20,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '',
+        mainTitle: '大甲區公所',
+        groupName: '芋見大甲 珍馨愛藺',
+        introduce1: '以大甲農會芋頭娃娃「芋妮」及「裕珍馨」 Q版奶油酥餅人，結合大甲百年藺編文化，頭戴藺草帽，手拿桿麵棍、春聯舞動，呈現豐富趣味畫面。',
     };
 
     const issueTextContent21 = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '海線-海線龍樂活',
         itemNumber: 21,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '',
+        mainTitle: '外埔區公所',
+        groupName: '外埔金黃大道來報喜',
+        introduce1: '以外埔之光～蜜蜂、海芋造型燈海及紅龍果交織而成的忘憂谷美景，透過燈光及再生材料堆疊製作，搭配燈光藝術展示並融合SDGs氣候行動議題，強調自然和諧環境保護及氣候變遷之重要性。',
     };
 
     const issueTextContent22 = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '海線-海線龍樂活',
         itemNumber: 22,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '',
+        mainTitle: '大安區公所',
+        groupName: '神佑大安與農共好',
+        introduce1: '本燈組以Q版神農大帝為主軸，象徵孕育農業的神祇，在其庇佑下大安各項農漁畜產皆能豐收。',
     };
 
     const issueTextContent23 = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '屯區-屯區龍賀踅',
         itemNumber: 23,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '',
+        mainTitle: '大里區公所',
+        groupName: '「杙」遊大里好風華',
+        introduce1: '「一府、二鹿、三艋舺、四諸羅、五竹塹、六大里杙」；大里舊稱「大里杙」，是台灣早年六大繁榮都市之一，足證大里早年繁華風光的歲月。',
     };
 
     const issueTextContent24 = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '屯區-屯區龍賀踅',
         itemNumber: 24,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '',
+        mainTitle: '太平區公所',
+        groupName: '龍馬精神 光耀太平',
+        introduce1: '以太平當紅的新建設馬卡龍公園為設計主體,主體內裝滿在地水果呈現太平的物產豐碩。而長安醫院化身為白龍隨身掛著聽診器守護民眾的健康，太平的獨有的枇杷寶寶與毛小孩嬉戲其中，整座園區洋溢在幸福歡樂的氛圍中，襯托出富市臺中&新好太平的意象。',
     };
 
     const issueTextContent25 = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '城區-城區龍幸福',
         itemNumber: 25,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '',
+        mainTitle: '南區區公所',
+        groupName: '花灑南區 勒在騎中',
+        introduce1: '興大園道的阿勃勒，展現浪漫黃金花雨；吉祥物阿柴、狗頭火柴盒象徵著「番仔火的故鄉」；綠空廊道保留了舊鐵道遺產，是散步、騎自行車的休閒好去處！',
     };
 
     const issueTextContent26 = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '城區-城區龍幸福',
         itemNumber: 26,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '',
+        mainTitle: '西區區公所',
+        groupName: '舞動活力 龍躍西區',
+        introduce1: `以西區2大特色主軸：臺中市役所及臺中爵士音樂節為設計概念，並結合龍年意象為主角，以薩克斯風、爵士鼓、大提琴、歌唱呈現整個爵士音樂的氛圍，再配合互動感應發出爵士搖擺樂曲，讓人在新舊共榮城市中，感受歡慶元宵佳節快樂氣氛。
+        藝術家名字｜張明璇、黃永祥
+        贊助單位｜麻園頭福德祠`,
     };
 
     const issueTextContent27 = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '城區-城區龍幸福',
         itemNumber: 27,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '',
+        mainTitle: '北屯區區公所',
+        groupName: '躍動未來 幸福北屯',
+        introduce1: '以北屯重大建設(巨蛋、北屯國民運動中心及溪東圖書館)、在地農產品(椪柑、文心蘭、竹筍)相互串聯為設計意象，展現北屯蓬勃發展、豐收滿載。',
     };
 
     const issueTextContent28 = {
-        topTitle: '豐山線-山城龍賀尞',
+        topTitle: '城區-城區龍幸福',
         itemNumber: 28,
-        mainTitle: '豐原區公所',
-        groupName: '美樂豐原 龍耀葫蘆墩',
-        introduce1: '',
+        mainTitle: '中區區公所',
+        groupName: '漫步舊城 新好時光~',
+        introduce1: '俏皮斗笠石獅跟著三百餘年歷史萬春宮媽祖，與順天宮輔順將軍一同遊歷如日據時期臺中「小京都」風情的水岸廊道，呈現舊城豐厚文化。',
     };
 
-    const navigate = useNavigate();
 
+    const ref1 = useRef(null);
+    const ref2 = useRef(null);
+    const ref3 = useRef(null);
+    const ref4 = useRef(null);
+    const ref5 = useRef(null);
+    const ref6 = useRef(null);
+    const ref7 = useRef(null);
+    const ref8 = useRef(null);
+    const ref9 = useRef(null);
+    const ref10 = useRef(null);
+    const ref11 = useRef(null);
+    const ref12 = useRef(null);
+    const ref13 = useRef(null);
+    const ref14 = useRef(null);
+    const ref15 = useRef(null);
+    const ref16 = useRef(null);
+    const ref17 = useRef(null);
+    const ref18 = useRef(null);
+    const ref19 = useRef(null);
+    const ref20 = useRef(null);
+    const ref21 = useRef(null);
+    const ref22 = useRef(null);
+    const ref23 = useRef(null);
+    const ref24 = useRef(null);
+    const ref25 = useRef(null);
+    const ref26 = useRef(null);
+    const ref27 = useRef(null);
+    const ref28 = useRef(null);
+
+    const scrollToRef = (ref) => {
+        if (ref.current) {
+          ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
+
+
+
+    const navigate = useNavigate();
     const navigateToMyPage = () => {
         navigate('/MyPage'); // Use the route you defined for MyPage component
     };
@@ -341,57 +385,57 @@ function Home(){
 
                     <div className='areabutton_group'>                
                         <div className='fir_line row flex-nowrap flex-sm-wrap' >
-                            <AreaButton className="col col-sm-2" number={1} text="豐原區公所" />
-                            <AreaButton className="col col-sm-2" number={2} text="石岡區公所" />
-                            <AreaButton className="col col-sm-2" number={3} text="大雅區公所" />
-                            <AreaButton className="col col-sm-2" number={4} text="沙鹿區公所" />
-                            <AreaButton className="col col-sm-2" number={5} text="龍井區公所" />
-                            <AreaButton className="col col-sm-2" number={6} text="梧棲區公所" />
-                            <AreaButton className="col col-sm-2" number={7} text="大肚區公所" />
+                            <AreaButton className="col col-sm-2" number={1} text="豐原區公所" onClickAction={() => scrollToRef(ref1)} />
+                            <AreaButton className="col col-sm-2" number={2} text="石岡區公所" onClickAction={() => scrollToRef(ref2)} />
+                            <AreaButton className="col col-sm-2" number={3} text="大雅區公所" onClickAction={() => scrollToRef(ref3)} />
+                            <AreaButton className="col col-sm-2" number={4} text="沙鹿區公所" onClickAction={() => scrollToRef(ref4)} />
+                            <AreaButton className="col col-sm-2" number={5} text="龍井區公所" onClickAction={() => scrollToRef(ref5)} />
+                            <AreaButton className="col col-sm-2" number={6} text="梧棲區公所" onClickAction={() => scrollToRef(ref6)}/>
+                            <AreaButton className="col col-sm-2" number={7} text="大肚區公所" onClickAction={() => scrollToRef(ref7)}/>
 
-                            <AreaButton className="col col-sm-2" number={8} text="清水區公所" />
-                            <AreaButton className="col col-sm-2" number={9} text="烏日區公所" />
-                            <AreaButton className="col col-sm-2" number={10} text="霧峰區公所" />
-                            <AreaButton className="col col-sm-2" number={11} text="南屯區公所" />
-                            <AreaButton className="col col-sm-2" number={12} text="西屯區公所" />
-                            <AreaButton className="col col-sm-2" number={13} text="北區區公所" />
-                            <AreaButton className="col col-sm-2" number={14} text="東區區公所" />
+                            <AreaButton className="col col-sm-2" number={8} text="清水區公所" onClickAction={() => scrollToRef(ref8)}/>
+                            <AreaButton className="col col-sm-2" number={9} text="烏日區公所" onClickAction={() => scrollToRef(ref9)}/>
+                            <AreaButton className="col col-sm-2" number={10} text="霧峰區公所" onClickAction={() => scrollToRef(ref10)}/>
+                            <AreaButton className="col col-sm-2" number={11} text="南屯區公所" onClickAction={() => scrollToRef(ref11)}/>
+                            <AreaButton className="col col-sm-2" number={12} text="西屯區公所" onClickAction={() => scrollToRef(ref12)}/>
+                            <AreaButton className="col col-sm-2" number={13} text="北區區公所" onClickAction={() => scrollToRef(ref13)}/>
+                            <AreaButton className="col col-sm-2" number={14} text="東區區公所" onClickAction={() => scrollToRef(ref14)}/>
                      
-                            <AreaButton className="col col-sm-2" number={15} text="新社區公所" />
-                            <AreaButton className="col col-sm-2" number={16} text="潭子區公所" />
-                            <AreaButton className="col col-sm-2" number={17} text="后里區公所" />
-                            <AreaButton className="col col-sm-2" number={18} text="東勢區公所" />
-                            <AreaButton className="col col-sm-2" number={19} text="神岡區公所" />
-                            <AreaButton className="col col-sm-2" number={20} text="大甲區公所" />
-                            <AreaButton className="col col-sm-2" number={21} text="外埔區公所" />
+                            <AreaButton className="col col-sm-2" number={15} text="新社區公所" onClickAction={() => scrollToRef(ref15)}/>
+                            <AreaButton className="col col-sm-2" number={16} text="潭子區公所" onClickAction={() => scrollToRef(ref16)}/>
+                            <AreaButton className="col col-sm-2" number={17} text="后里區公所" onClickAction={() => scrollToRef(ref17)}/>
+                            <AreaButton className="col col-sm-2" number={18} text="東勢區公所" onClickAction={() => scrollToRef(ref18)}/>
+                            <AreaButton className="col col-sm-2" number={19} text="神岡區公所" onClickAction={() => scrollToRef(ref19)}/>
+                            <AreaButton className="col col-sm-2" number={20} text="大甲區公所" onClickAction={() => scrollToRef(ref20)}/>
+                            <AreaButton className="col col-sm-2" number={21} text="外埔區公所" onClickAction={() => scrollToRef(ref21)}/>
 
-                            <AreaButton className="col col-sm-2" number={22} text="大安區公所" />
-                            <AreaButton className="col col-sm-2" number={23} text="大里區公所" />
-                            <AreaButton className="col col-sm-2" number={24} text="太平區公所" />
-                            <AreaButton className="col col-sm-2" number={25} text="南區區公所" />
-                            <AreaButton className="col col-sm-2" number={26} text="西區區公所" />
-                            <AreaButton className="col col-sm-2" number={27} text="北屯區公所" />
-                            <AreaButton className="col col-sm-2" number={28} text="中區區公所" />
-                    
+                            <AreaButton className="col col-sm-2" number={22} text="大安區公所" onClickAction={() => scrollToRef(ref22)}/>
+                            <AreaButton className="col col-sm-2" number={23} text="大里區公所" onClickAction={() => scrollToRef(ref23)}/>
+                            <AreaButton className="col col-sm-2" number={24} text="太平區公所" onClickAction={() => scrollToRef(ref24)}/>
+                            <AreaButton className="col col-sm-2" number={25} text="南區區公所" onClickAction={() => scrollToRef(ref25)}/>
+                            <AreaButton className="col col-sm-2" number={26} text="西區區公所" onClickAction={() => scrollToRef(ref26)}/>
+                            <AreaButton className="col col-sm-2" number={27} text="北屯區公所" onClickAction={() => scrollToRef(ref27)}/>
+                            <AreaButton className="col col-sm-2" number={28} text="中區區公所" onClickAction={() => scrollToRef(ref28)}/>
+
                         </div>
                     </div>
 
                         <UpperButton/>
 
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref1}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages1}/>
                             </div>
                                
-                                <div className='right_group'>
+                            <div className='right_group'>
                                     <IssueText {...issueTextContent1} />
                                     <div className='vote_button' onClick={navigateToMyPage} > 
                                     <VoteButton label={"投下您的一票"} />
                                     </div>
-                                </div>
+                            </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref2}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages2}/>
                             </div>
@@ -404,7 +448,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref3}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages3}/>
                             </div>
@@ -416,7 +460,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref4}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages4}/>
                             </div>
@@ -428,7 +472,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref5}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages5}/>
                             </div>
@@ -440,7 +484,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref6}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages6}/>
                             </div>
@@ -452,7 +496,7 @@ function Home(){
                                 </div>
                         </div>
                         
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref7}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages7}/>
                             </div>
@@ -464,7 +508,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref8}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages8}/>
                             </div>
@@ -476,8 +520,8 @@ function Home(){
                                 </div>
                         </div>
                         
-                        <div className='contest_group'>
-                            <div className='left_group'>
+                        <div className='contest_group' ref={ref9}>
+                            <div className='left_group' >
                                 < WebPresent images ={carouselImages9}/>
                             </div>
                             <div className='right_group'>
@@ -488,7 +532,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref10}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages10}/>
                             </div>
@@ -500,7 +544,7 @@ function Home(){
                                 </div>
                         </div>
                         
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref11}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages11}/>
                             </div>
@@ -512,7 +556,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double'ref={ref12}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages12}/>
                             </div>
@@ -524,7 +568,7 @@ function Home(){
                                 </div>
                         </div>
                         
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref13}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages13}/>
                             </div>
@@ -536,7 +580,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref14}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages14}/>
                             </div>
@@ -548,7 +592,7 @@ function Home(){
                                 </div>
                         </div>
                         
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref15}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages15}/>
                             </div>
@@ -560,7 +604,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref16}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages16}/>
                             </div>
@@ -572,7 +616,7 @@ function Home(){
                                 </div>
                         </div>
                         
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref17}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages17}/>
                             </div>
@@ -584,7 +628,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref18}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages18}/>
                             </div>
@@ -596,7 +640,7 @@ function Home(){
                                 </div>
                         </div>
                         
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref19}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages19}/>
                             </div>
@@ -608,7 +652,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref20}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages20}/>
                             </div>
@@ -620,7 +664,7 @@ function Home(){
                                 </div>
                         </div>
                         
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref21}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages21}/>
                             </div>
@@ -632,7 +676,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref22}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages22}/>
                             </div>
@@ -644,7 +688,7 @@ function Home(){
                                 </div>
                         </div>
                         
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref23}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages23}/>
                             </div>
@@ -656,7 +700,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref24}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages24}/>
                             </div>
@@ -668,7 +712,7 @@ function Home(){
                                 </div>
                         </div>
                         
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref25}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages25}/>
                             </div>
@@ -680,7 +724,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref26}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages26}/>
                             </div>
@@ -692,7 +736,7 @@ function Home(){
                                 </div>
                         </div>
                         
-                        <div className='contest_group'>
+                        <div className='contest_group' ref={ref27}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages27}/>
                             </div>
@@ -704,7 +748,7 @@ function Home(){
                                 </div>
                         </div>
 
-                        <div className='contest_group_double'>
+                        <div className='contest_group_double' ref={ref28}>
                             <div className='left_group'>
                                 < WebPresent images ={carouselImages28}/>
                             </div>

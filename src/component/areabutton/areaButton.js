@@ -2,7 +2,7 @@ import React ,{useEffect, useState , useRef } from "react";
 import '../areabutton/areaButton.css';
 
 function AreaButton (props){
-    const { number , text}=props;
+    const { number , text , onClickAction }=props;
 
     const [isClicked , setClicked]=useState(false);
     const [isHovered , setHovered]=useState(false);
@@ -49,7 +49,10 @@ function AreaButton (props){
 
     const handleClick =()=>{
         setClicked(!isClicked);
-         // 点击后停止悬停效果
+        if (onClickAction){
+            onClickAction();
+        }
+        
     };
 
     useEffect(() => {

@@ -7,8 +7,38 @@ import WebPresent from '../../component/part/webPresent';
 import IssueText from '../../component/issuetext/IssueText';
 import VoteButton from '../../component/part/votebutton/VoteButton';
 import { useNavigate } from 'react-router-dom';
+
 import image101 from '../../images/contest/1山線-豐原區燈組.jpg';
 import image102 from '../../images/contest/1_2山線test.jpg';
+import image201 from '../../images/contest/2山線-石岡區燈組.png';
+import image301 from '../../images/contest/3山線-大雅區燈組.png';
+import image401 from '../../images/contest/4海線-沙鹿區燈組.jpg';
+import image501 from '../../images/contest/5海線-龍井區燈組.JPG';
+import image601 from '../../images/contest/6海線-梧棲區燈組.jpeg';
+import image701 from '../../images/contest/7海線-大肚區燈組.png';
+import image801 from '../../images/contest/8海線-清水區燈組.jpg';
+import image901 from '../../images/contest/9屯區-烏日區燈組.jpg';
+import image1001 from '../../images/contest/10屯區-霧峰區燈組.jpg';
+import image1101 from '../../images/contest/11城區-南屯區燈組.jpg';  
+import image1201 from '../../images/contest/12城區-西屯區燈組.png';  
+import image1301 from '../../images/contest/13城區-北區燈組.jpg';
+import image1401 from '../../images/contest/14城區-東區燈組.jpg';  
+import image1501 from '../../images/contest/15山線-新社區燈組.jpg';  
+import image1601 from '../../images/contest/16山線-潭子區燈組.jpg';  
+import image1701 from '../../images/contest/17山線-后里區燈組.jpg';  
+import image1801 from '../../images/contest/18山線-東勢區燈組.png';  
+import image1901 from '../../images/contest/19山線-神岡區燈組.png'
+import image2001 from '../../images/contest/20海線-大甲區燈組.jpg';
+import image2101 from '../../images/contest/21海線-外埔區燈組.png';   
+import image2201 from '../../images/contest/22海線-大安區燈組.jpg';   
+import image2301 from '../../images/contest/23屯區-大里區燈組.jpg';   
+import image2401 from '../../images/contest/24屯區-太平區燈組.jpg';   
+import image2501 from '../../images/contest/25城區-南區燈組.jpg';   
+import image2601 from '../../images/contest/26城區-西區燈組.jpg';   
+import image2701 from '../../images/contest/27城區-北屯區燈組.jpg';   
+import image2801 from '../../images/contest/28城區-中區燈組.jpg'; 
+
+
 
 function toggleBodyScroll(isEnabled) {
     if (isEnabled) {
