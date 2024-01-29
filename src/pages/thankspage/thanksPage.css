@@ -6,6 +6,8 @@
 .header{
 width: 100%;
 height: auto;
+margin: 0;
+padding: 0;
 border-radius: var(--box-shadow, 0px);
 background: var(--op-bannerBk, linear-gradient(180deg, #FF119C 0%, #E3007F 100%));
 }
@@ -15,11 +17,19 @@ background: var(--op-bannerBk, linear-gradient(180deg, #FF119C 0%, #E3007F 100%)
 {
   display: block;
   width: 100%;
+  background: var(--op-bannerBk, linear-gradient(180deg, #FF119C 0%, #E3007F 100%));
 }
+
+
 .mb-banner
 {
   display: none;
 }
+
+.scroll-container{
+  width: 100%;
+}
+.
 
 .page-container{
 
@@ -218,13 +228,13 @@ letter-spacing: 0.64px;
     }
 
     .thanks_data{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 1rem;
-      font-weight: 700;
-      margin: 20%;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 20%;
+}
 
       .vote_button_page{
         margin-left: -4px;
